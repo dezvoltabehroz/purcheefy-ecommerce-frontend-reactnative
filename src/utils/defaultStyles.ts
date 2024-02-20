@@ -89,8 +89,15 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   textPrimary: {
-    color: colors.primary,
+    color: colors.primaryDark,
   },
+  textGrey1: {
+    color: colors.grey1,
+  },
+  textBlack100: {
+    color: colors.black100,
+  },
+
   alignSelfEnd: {
     alignSelf: 'flex-end',
   },
@@ -105,6 +112,9 @@ export default StyleSheet.create({
     paddingHorizontal: 0,
   },
   paddingHorizontal16: {
-    paddingHorizontal: 16,
+    paddingHorizontal: rw(16),
+  },
+  paddingHorizontal24: {
+    paddingHorizontal: rw(24),
   },
 });

@@ -8,3 +8,9 @@ export type FontWeight =
   | 'regular'
   | 'semiBold'
   | 'thin';
+
+export type AuthenticationStackParamList = {
+  OnboardingScreen: undefined;
+};
+
+export type IconType = '';
