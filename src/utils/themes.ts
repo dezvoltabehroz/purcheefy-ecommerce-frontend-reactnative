@@ -1,6 +1,8 @@
 export const colors = {
   black: '#000000',
   white: '#FFFFFF',
+  primary: '#F37024',
+  primaryDark: '#ED7E1C',
 };
 
 export const fonts = {
