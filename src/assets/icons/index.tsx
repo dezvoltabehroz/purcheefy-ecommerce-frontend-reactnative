@@ -1,5 +1,10 @@
 import {IconType} from 'utils/types';
 import Logo from './Logo.svg';
+import Sms from './Sms.svg';
+import Lock from './Lock.svg';
+import EyeClose from './EyeClose.svg';
+import Person from './Person.svg';
+import ChevronLeft from './ChevronLeft.svg';
 
 import {rw} from 'utils/dimentions';
 
@@ -26,6 +31,11 @@ export const getIcon = (
 ) => {
   const icons: any = {
     Logo: <Logo {...props} />,
+    EyeClose: <EyeClose {...props} />,
+    Lock: <Lock {...props} />,
+    Sms: <Sms {...props} />,
+    Person: <Person {...props} />,
+    ChevronLeft: <ChevronLeft {...props} />,
   };
   return icons[iconName];
 };

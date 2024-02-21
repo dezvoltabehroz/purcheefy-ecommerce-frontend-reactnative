@@ -24,6 +24,7 @@ export const fontSizes = {
   h3: responsiveFontOrBorder(26),
   h4: responsiveFontOrBorder(24),
   h5: responsiveFontOrBorder(18),
+  h6: responsiveFontOrBorder(16),
   body: responsiveFontOrBorder(15),
   body2: responsiveFontOrBorder(14),
   body3: responsiveFontOrBorder(13),

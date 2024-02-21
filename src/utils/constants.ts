@@ -5,4 +5,23 @@ export const strings = {
   signup: 'Signup',
   login: 'Login',
   alreadyHaveAccount: 'Already have an Account?',
+  welcomeBack: 'Welcome Back',
+  loginToYourAccount: 'Log in to your account using email or social networks',
+  enterEmail: 'Enter Email',
+  password: 'Password',
+  forgotPassword: 'Forgot Password?',
+  didntHaveAccount: "Don't have an Account?",
+  createOne: 'Create One',
+  createNewAccount: 'Create New Account',
+  name: 'Name',
+  confirmPassword: 'Confirm Password',
+  resetPassword: 'Reset Password',
+  weWillSendLink:
+    'We will send you a link to your email to reset your password.',
+  submit: 'Submit',
+  passwordUpdated: 'Password has been updated',
+  pressLogin: 'Please press login to continue',
+  otpVerification: 'OTP Verification',
+  enterCode:
+    'Enter the 6-digit security code, which we have sent to your email.',
 };

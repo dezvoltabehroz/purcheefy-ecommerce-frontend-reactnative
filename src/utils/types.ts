@@ -9,8 +9,18 @@ export type FontWeight =
   | 'semiBold'
   | 'thin';
 
-export type AuthenticationStackParamList = {
+export type MainStackParamList = {
   OnboardingScreen: undefined;
+  LoginScreen: undefined;
+  RegistrationScreen: undefined;
+  ResetPasswordScreen: undefined;
+  OtpVerificationScreen: undefined;
 };
 
-export type IconType = 'Logo';
+export type IconType =
+  | 'Logo'
+  | 'EyeClose'
+  | 'Lock'
+  | 'Sms'
+  | 'Person'
+  | 'ChevronLeft';

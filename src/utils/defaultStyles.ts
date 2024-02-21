@@ -63,6 +63,9 @@ export default StyleSheet.create({
   h5: {
     fontSize: fontSizes.h5,
   },
+  h6: {
+    fontSize: fontSizes.h6,
+  },
   body: {
     fontSize: fontSizes.body,
   },
@@ -94,12 +97,17 @@ export default StyleSheet.create({
   textGrey1: {
     color: colors.grey1,
   },
+  textGrey4: {
+    color: colors.grey4,
+  },
   textBlack100: {
     color: colors.black100,
   },
-
   alignSelfEnd: {
     alignSelf: 'flex-end',
+  },
+  alignSelfCenter: {
+    alignSelf: 'center',
   },
   fontMedium: {
     fontFamily: fonts.Poppins.medium,

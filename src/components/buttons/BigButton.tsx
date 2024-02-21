@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   GestureResponderEvent,
   StyleSheet,
@@ -61,7 +60,7 @@ Props) => {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    paddingVertical: rh(12),
+    paddingVertical: rh(14),
     borderRadius: rFB(50),
     flexDirection: 'row',
     justifyContent: 'center',

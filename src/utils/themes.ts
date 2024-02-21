@@ -6,6 +6,12 @@ export const colors = {
   transparent: 'transparent',
   grey1: '#9F9E9A',
   black100: '#272727',
+  grey2: '#0F1414',
+  grey3: '#F2F2F2',
+  grey4: '#808080',
+  grey5: '#F5F5F5',
+  placeholderColor: 'rgba(15, 20, 20, 0.4)',
+  borderColor: 'rgba(0, 0, 0, 0.1)',
 };
 
 export const fonts = {
