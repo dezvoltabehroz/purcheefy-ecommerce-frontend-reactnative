@@ -23,4 +23,17 @@ export type IconType =
   | 'Lock'
   | 'Sms'
   | 'Person'
-  | 'ChevronLeft';
+  | 'ChevronLeft'
+  | 'Cart'
+  | 'Dashboard'
+  | 'Delete'
+  | 'Exclamation'
+  | 'Logout'
+  | 'Menu'
+  | 'MenuVertical'
+  | 'Notification'
+  | 'NotificationActive'
+  | 'Profile'
+  | 'Setting'
+  | 'Store'
+  | 'Archive';

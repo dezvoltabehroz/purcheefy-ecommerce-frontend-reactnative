@@ -5,6 +5,19 @@ import Lock from './Lock.svg';
 import EyeClose from './EyeClose.svg';
 import Person from './Person.svg';
 import ChevronLeft from './ChevronLeft.svg';
+import Cart from './Cart.svg';
+import Dashboard from './Dashboard.svg';
+import Delete from './Delete.svg';
+import Exclamation from './Exclamation.svg';
+import Logout from './Logout.svg';
+import Menu from './Menu.svg';
+import MenuVertical from './MenuVertical.svg';
+import Notification from './Notification.svg';
+import NotificationActive from './NotificationActive.svg';
+import Profile from './Profile.svg';
+import Setting from './Setting.svg';
+import Store from './Store.svg';
+import Archive from './Archive.svg';
 
 import {rw} from 'utils/dimentions';
 
@@ -36,6 +49,19 @@ export const getIcon = (
     Sms: <Sms {...props} />,
     Person: <Person {...props} />,
     ChevronLeft: <ChevronLeft {...props} />,
+    Cart: <Cart {...props} />,
+    Dashboard: <Dashboard {...props} />,
+    Delete: <Delete {...props} />,
+    Exclamation: <Exclamation {...props} />,
+    Logout: <Logout {...props} />,
+    Menu: <Menu {...props} />,
+    MenuVertical: <MenuVertical {...props} />,
+    Notification: <Notification {...props} />,
+    NotificationActive: <NotificationActive {...props} />,
+    Profile: <Profile {...props} />,
+    Setting: <Setting {...props} />,
+    Store: <Store {...props} />,
+    Archive: <Archive {...props} />,
   };
   return icons[iconName];
 };
