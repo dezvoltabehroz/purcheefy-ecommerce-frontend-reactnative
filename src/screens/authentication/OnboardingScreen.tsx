@@ -2,7 +2,7 @@ import images from 'assets/images';
 import AppText from 'components/AppText';
 import VerticalSpacer from 'components/VerticalSpacer';
 import BigButton from 'components/buttons/BigButton';
-import {Image, StatusBar, StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 import {strings} from 'utils/constants';
 import defaultStyles from 'utils/defaultStyles';
 import {rFB} from 'utils/dimentions';

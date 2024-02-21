@@ -13,4 +13,4 @@ export type AuthenticationStackParamList = {
   OnboardingScreen: undefined;
 };
 
-export type IconType = '';
+export type IconType = 'Logo';
