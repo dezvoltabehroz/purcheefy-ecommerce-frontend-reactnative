@@ -5,6 +5,7 @@ import Lock from './Lock.svg';
 import EyeClose from './EyeClose.svg';
 import Person from './Person.svg';
 import ChevronLeft from './ChevronLeft.svg';
+import ChevronDown from './ChevronDown.svg';
 import Cart from './Cart.svg';
 import Dashboard from './Dashboard.svg';
 import Delete from './Delete.svg';
@@ -64,6 +65,7 @@ export const getIcon = (
     Store: <Store {...props} />,
     Archive: <Archive {...props} />,
     Badge: <Badge {...props} />,
+    ChevronDown: <ChevronDown {...props} />,
   };
   return icons[iconName];
 };

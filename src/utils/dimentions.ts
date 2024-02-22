@@ -21,6 +21,7 @@ export const responsiveFontOrBorder = (size: number, factor: number = 0.5) => {
 export const fontSizes = {
   h1: responsiveFontOrBorder(42),
   h2: responsiveFontOrBorder(30),
+  h2_5: responsiveFontOrBorder(28),
   h3: responsiveFontOrBorder(26),
   h4: responsiveFontOrBorder(24),
   h5: responsiveFontOrBorder(18),

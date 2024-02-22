@@ -35,6 +35,7 @@ export type IconType =
   | 'Sms'
   | 'Person'
   | 'ChevronLeft'
+  | 'ChevronDown'
   | 'Cart'
   | 'Dashboard'
   | 'Delete'
@@ -49,3 +50,11 @@ export type IconType =
   | 'Store'
   | 'Archive'
   | 'Badge';
+
+export interface CartTileProps {
+  title: string;
+  value: string;
+  cartCount: number;
+  backgroundColor?: string;
+  onPress?: () => void;
+}

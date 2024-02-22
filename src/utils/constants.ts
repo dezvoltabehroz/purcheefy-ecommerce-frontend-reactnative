@@ -26,4 +26,8 @@ export const strings = {
     'Enter the 6-digit security code, which we have sent to your email.',
   verifiedProfile: 'Verified Profile',
   logout: 'Logout',
+  welcomeToSaleStack: 'Welcome to SaleStack',
+  chooseStore: 'Choose Store',
+  newCart: 'New Cart',
+  carts: 'Carts',
 };

@@ -54,6 +54,9 @@ export default StyleSheet.create({
   h2: {
     fontSize: fontSizes.h2,
   },
+  h2_5: {
+    fontSize: fontSizes.h2_5,
+  },
   h3: {
     fontSize: fontSizes.h3,
   },
@@ -127,5 +130,8 @@ export default StyleSheet.create({
   },
   paddingHorizontal24: {
     paddingHorizontal: rw(24),
+  },
+  lessTextTopMargin: {
+    marginTop: rw(-10),
   },
 });
