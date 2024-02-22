@@ -43,6 +43,10 @@ const LoginScreen = () => {
     navigation.navigate('ResetPasswordScreen');
   };
 
+  const _handleLogin = () => {
+    navigation.navigate('Home');
+  };
+
   return (
     <SafeAreaView
       style={[
@@ -97,7 +101,7 @@ const LoginScreen = () => {
         </AppText>
       </TouchableOpacity>
       <VerticalSpacer factor={3} />
-      <BigButton title={strings.login} />
+      <BigButton title={strings.login} onPress={_handleLogin} />
       <VerticalSpacer factor={3} />
       <AppText
         fontWeight="light"

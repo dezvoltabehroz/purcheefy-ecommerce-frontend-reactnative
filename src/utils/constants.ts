@@ -24,4 +24,6 @@ export const strings = {
   otpVerification: 'OTP Verification',
   enterCode:
     'Enter the 6-digit security code, which we have sent to your email.',
+  verifiedProfile: 'Verified Profile',
+  logout: 'Logout',
 };

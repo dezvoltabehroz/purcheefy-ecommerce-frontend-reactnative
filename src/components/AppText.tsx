@@ -34,6 +34,7 @@ const AppText = ({
           fontFamily: fonts[fontFamily][fontWeight],
           fontSize: fontSizes.body,
           color: colors.black,
+          lineHeight: 26,
         },
         style,
       ]}>

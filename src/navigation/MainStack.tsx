@@ -8,6 +8,7 @@ import OtpVerificationScreen from 'screens/authentication/OtpVerificationScreen'
 import RegistrationScreen from 'screens/authentication/RegistrationScreen';
 import ResetPasswordScreen from 'screens/authentication/ResetPasswordScreen';
 import {MainStackParamList} from 'utils/types';
+import MainDrawerNavigation from './MainDrawerNavigation';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -30,6 +31,7 @@ const MainStack = () => {
         name="OtpVerificationScreen"
         component={OtpVerificationScreen}
       />
+      <Stack.Screen name="Home" component={MainDrawerNavigation} />
     </Stack.Navigator>
   );
 };

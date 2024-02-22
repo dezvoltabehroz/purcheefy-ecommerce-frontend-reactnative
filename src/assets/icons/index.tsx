@@ -18,6 +18,7 @@ import Profile from './Profile.svg';
 import Setting from './Setting.svg';
 import Store from './Store.svg';
 import Archive from './Archive.svg';
+import Badge from './Badge.svg';
 
 import {rw} from 'utils/dimentions';
 
@@ -62,6 +63,7 @@ export const getIcon = (
     Setting: <Setting {...props} />,
     Store: <Store {...props} />,
     Archive: <Archive {...props} />,
+    Badge: <Badge {...props} />,
   };
   return icons[iconName];
 };

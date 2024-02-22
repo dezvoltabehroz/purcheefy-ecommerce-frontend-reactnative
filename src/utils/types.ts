@@ -15,7 +15,18 @@ export type MainStackParamList = {
   RegistrationScreen: undefined;
   ResetPasswordScreen: undefined;
   OtpVerificationScreen: undefined;
+  Home: undefined;
 };
+
+export type MainDrawerParamList = {
+  DashboardScreen: undefined;
+};
+
+export interface DrawerItemType {
+  id: string;
+  icon: IconType;
+  title: string;
+}
 
 export type IconType =
   | 'Logo'
@@ -36,4 +47,5 @@ export type IconType =
   | 'Profile'
   | 'Setting'
   | 'Store'
-  | 'Archive';
+  | 'Archive'
+  | 'Badge';

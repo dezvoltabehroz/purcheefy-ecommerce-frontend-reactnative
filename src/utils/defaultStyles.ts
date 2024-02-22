@@ -103,6 +103,9 @@ export default StyleSheet.create({
   textBlack100: {
     color: colors.black100,
   },
+  textRed: {
+    color: colors.red,
+  },
   alignSelfEnd: {
     alignSelf: 'flex-end',
   },
