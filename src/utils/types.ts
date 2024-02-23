@@ -1,3 +1,5 @@
+import {IconProps} from 'assets/icons';
+
 export type FontFamily = 'Poppins';
 export type FontWeight =
   | 'bold'
@@ -21,6 +23,7 @@ export type MainStackParamList = {
 export type MainDrawerParamList = {
   DashboardScreen: undefined;
   NotificationsListingScreen: undefined;
+  SettingsListingScreen: undefined;
 };
 
 export interface DrawerItemType {
@@ -52,7 +55,11 @@ export type IconType =
   | 'Store'
   | 'Archive'
   | 'Badge'
-  | 'BackIcon';
+  | 'BackIcon'
+  | 'Globe'
+  | 'Whatsapp'
+  | 'Privacy'
+  | 'LockWhite';
 
 export interface CartTileProps {
   title: string;
@@ -68,4 +75,12 @@ export interface Notification {
   description: string;
   time: string;
   type: 'In-App' | 'Cart';
+}
+
+export interface SettingMenuItem {
+  id: string;
+  title: string;
+  icon: IconType;
+  iconProps?: IconProps;
+  bgColor: string;
 }

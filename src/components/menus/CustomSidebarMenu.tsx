@@ -30,6 +30,13 @@ const CustomSidebarMenu = (props: DrawerContentComponentProps) => {
     navigation.dispatch(DrawerActions.closeDrawer());
   };
 
+  const _handleItemPressed = (id: string) => {
+    if (id == '8') {
+      _handleCloseDrawer();
+      navigation.navigate('SettingsListingScreen');
+    }
+  };
+
   return (
     <SafeAreaView style={[defaultStyles.flex1, defaultStyles.bgWhite]}>
       <DrawerContentScrollView style={styles.container}>
@@ -41,7 +48,8 @@ const CustomSidebarMenu = (props: DrawerContentComponentProps) => {
           <View key={option.id}>
             <TouchableOpacity
               activeOpacity={0.8}
-              style={styles.optionContainer}>
+              style={styles.optionContainer}
+              onPress={() => _handleItemPressed(option.id)}>
               {getIcon(option.icon)}
               <HorizontalSpacer factor={1.5} />
               <AppText>{option.title}</AppText>
