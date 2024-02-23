@@ -2,6 +2,7 @@ import {
   NativeStackNavigationOptions,
   createNativeStackNavigator,
 } from '@react-navigation/native-stack';
+import ChangeLanguageScreen from 'screens/settings/ChangeLanguageScreen';
 import ConnectWhatsappScreen from 'screens/settings/ConnectWhatsappScreen';
 import PrivacyPolicyScreen from 'screens/settings/PrivacyPolicyScreen';
 import ResetPasswordSettingScreen from 'screens/settings/ResetPasswordSettingScreen';
@@ -32,6 +33,10 @@ const SettingStack = () => {
       <Stack.Screen
         name="ConnectWhatsappScreen"
         component={ConnectWhatsappScreen}
+      />
+      <Stack.Screen
+        name="ChangeLanguageScreen"
+        component={ChangeLanguageScreen}
       />
     </Stack.Navigator>
   );

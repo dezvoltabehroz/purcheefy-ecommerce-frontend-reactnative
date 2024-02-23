@@ -20,6 +20,7 @@ const accountOptions: SettingMenuItem[] = [
     title: 'Language',
     icon: 'Globe',
     bgColor: colors.primary,
+    navigation: 'ChangeLanguageScreen',
   },
   {
     id: '3',

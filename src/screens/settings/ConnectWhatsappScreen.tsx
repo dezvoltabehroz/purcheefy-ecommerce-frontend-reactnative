@@ -9,7 +9,7 @@ import {rw} from 'utils/dimentions';
 const ConnectWhatsappScreen = () => {
   return (
     <View style={[defaultStyles.flex1, defaultStyles.bgWhite]}>
-      <MinimalAppbar title="WhatsApp number" showBackIcon withElevation />
+      <MinimalAppbar title="WhatsApp Number" showBackIcon withElevation />
       <ScrollView style={defaultStyles.paddingHorizontal24}>
         <VerticalSpacer factor={6} />
         <View style={defaultStyles.center}>

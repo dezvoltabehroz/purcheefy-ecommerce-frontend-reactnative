@@ -48,6 +48,9 @@ export default StyleSheet.create({
   textAlignCenter: {
     textAlign: 'center',
   },
+  textAlignLeft: {
+    textAlign: 'left',
+  },
   h1: {
     fontSize: fontSizes.h1,
   },

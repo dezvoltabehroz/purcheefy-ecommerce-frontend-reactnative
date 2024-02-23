@@ -31,6 +31,7 @@ export type SettingStackParamList = {
   ResetPasswordSettingScreen: undefined;
   PrivacyPolicyScreen: undefined;
   ConnectWhatsappScreen: undefined;
+  ChangeLanguageScreen: undefined;
 };
 
 export type DashboardStackParamList = {
@@ -110,5 +111,6 @@ export interface SettingMenuItem {
   navigation?:
     | 'ResetPasswordSettingScreen'
     | 'PrivacyPolicyScreen'
-    | 'ConnectWhatsappScreen';
+    | 'ConnectWhatsappScreen'
+    | 'ChangeLanguageScreen';
 }
