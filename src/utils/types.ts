@@ -21,14 +21,18 @@ export type MainStackParamList = {
 };
 
 export type MainDrawerParamList = {
-  DashboardScreen: undefined;
   NotificationsListingScreen: undefined;
   SettingStack: undefined;
+  DashboardStack: undefined;
 };
 
 export type SettingStackParamList = {
   SettingsListingScreen: undefined;
   ResetPasswordSettingScreen: undefined;
+};
+
+export type DashboardStackParamList = {
+  DashboardScreen: undefined;
 };
 
 export interface DrawerItemType {

@@ -2,8 +2,8 @@ import {
   NativeStackNavigationOptions,
   createNativeStackNavigator,
 } from '@react-navigation/native-stack';
-import ResetPasswordSettingScreen from 'screens/home/ResetPasswordSettingScreen';
-import SettingsListingScreen from 'screens/home/SettingsListingScreen';
+import ResetPasswordSettingScreen from 'screens/settings/ResetPasswordSettingScreen';
+import SettingsListingScreen from 'screens/settings/SettingsListingScreen';
 import {SettingStackParamList} from 'utils/types';
 
 const Stack = createNativeStackNavigator<SettingStackParamList>();
