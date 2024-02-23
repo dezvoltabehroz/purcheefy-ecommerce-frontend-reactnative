@@ -28,6 +28,16 @@ import Globe from './Globe.svg';
 import Whatsapp from './Whatsapp.svg';
 import Privacy from './Privacy.svg';
 import Tick from './Tick.svg';
+import DrupalGrey from './DrupalGrey.svg';
+import Drupal from './Drupal.svg';
+import JoomlaGrey from './JoomlaGrey.svg';
+import Joomla from './Joomla.svg';
+import MagentoGrey from './MagentoGrey.svg';
+import Magento from './Magento.svg';
+import ShopifyGrey from './ShopifyGrey.svg';
+import Shopify from './Shopify.svg';
+import WordpressGrey from './WordpressGrey.svg';
+import Wordpress from './Wordpress.svg';
 
 import {rw} from 'utils/dimentions';
 
@@ -82,6 +92,16 @@ export const getIcon = (
     Whatsapp: <Whatsapp {...props} />,
     Privacy: <Privacy {...props} />,
     Tick: <Tick {...props} />,
+    DrupalGrey: <DrupalGrey {...props} />,
+    Drupal: <Drupal {...props} />,
+    WordpressGrey: <WordpressGrey {...props} />,
+    Wordpress: <Wordpress {...props} />,
+    MagentoGrey: <MagentoGrey {...props} />,
+    Magento: <Magento {...props} />,
+    ShopifyGrey: <ShopifyGrey {...props} />,
+    Shopify: <Shopify {...props} />,
+    JoomlaGrey: <JoomlaGrey {...props} />,
+    Joomla: <Joomla {...props} />,
   };
   return icons[iconName];
 };

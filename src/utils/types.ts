@@ -29,6 +29,7 @@ export type MainDrawerParamList = {
 export type SettingStackParamList = {
   SettingsListingScreen: undefined;
   ResetPasswordSettingScreen: undefined;
+  PrivacyPolicyScreen: undefined;
 };
 
 export type DashboardStackParamList = {
@@ -70,7 +71,17 @@ export type IconType =
   | 'Privacy'
   | 'LockWhite'
   | 'LockBlack'
-  | 'Tick';
+  | 'Tick'
+  | 'DrupalGrey'
+  | 'Drupal'
+  | 'WordpressGrey'
+  | 'Wordpress'
+  | 'MagentoGrey'
+  | 'Magento'
+  | 'ShopifyGrey'
+  | 'Shopify'
+  | 'JoomlaGrey'
+  | 'Joomla';
 
 export interface CartTileProps {
   title: string;
@@ -94,5 +105,5 @@ export interface SettingMenuItem {
   icon: IconType;
   iconProps?: IconProps;
   bgColor: string;
-  navigation?: 'ResetPasswordSettingScreen';
+  navigation?: 'ResetPasswordSettingScreen' | 'PrivacyPolicyScreen';
 }

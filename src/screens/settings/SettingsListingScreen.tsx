@@ -35,6 +35,7 @@ const otherOptions: SettingMenuItem[] = [
     title: 'Privacy Policy',
     icon: 'Privacy',
     bgColor: '#4CB1EB',
+    navigation: 'PrivacyPolicyScreen',
   },
 ];
 
