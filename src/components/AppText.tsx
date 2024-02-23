@@ -33,7 +33,7 @@ const AppText = ({
         {
           fontFamily: fonts[fontFamily][fontWeight],
           fontSize: fontSizes.body,
-          color: colors.black,
+          color: colors.blackPrimary,
         },
         style,
       ]}>

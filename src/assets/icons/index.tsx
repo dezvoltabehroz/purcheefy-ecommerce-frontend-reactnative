@@ -7,6 +7,7 @@ import Person from './Person.svg';
 import ChevronLeft from './ChevronLeft.svg';
 import ChevronDown from './ChevronDown.svg';
 import Cart from './Cart.svg';
+import Cart2 from './Cart2.svg';
 import Dashboard from './Dashboard.svg';
 import Delete from './Delete.svg';
 import Exclamation from './Exclamation.svg';
@@ -20,6 +21,7 @@ import Setting from './Setting.svg';
 import Store from './Store.svg';
 import Archive from './Archive.svg';
 import Badge from './Badge.svg';
+import BackIcon from './BackIcon.svg';
 
 import {rw} from 'utils/dimentions';
 
@@ -52,6 +54,7 @@ export const getIcon = (
     Person: <Person {...props} />,
     ChevronLeft: <ChevronLeft {...props} />,
     Cart: <Cart {...props} />,
+    Cart2: <Cart2 {...props} />,
     Dashboard: <Dashboard {...props} />,
     Delete: <Delete {...props} />,
     Exclamation: <Exclamation {...props} />,
@@ -66,6 +69,7 @@ export const getIcon = (
     Archive: <Archive {...props} />,
     Badge: <Badge {...props} />,
     ChevronDown: <ChevronDown {...props} />,
+    BackIcon: <BackIcon {...props} />,
   };
   return icons[iconName];
 };

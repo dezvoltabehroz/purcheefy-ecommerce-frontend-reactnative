@@ -13,10 +13,17 @@ const DashboardAppbar = () => {
     navigation.openDrawer();
   };
 
+  const _handleNotificationNavigation = () => {
+    navigation.navigate('NotificationsListingScreen');
+  };
+
   return (
     <View style={[styles.container]}>
       <CircularIconButton icon="Menu" onPress={_handleOpenDrawer} />
-      <CircularIconButton icon="NotificationActive" />
+      <CircularIconButton
+        icon="NotificationActive"
+        onPress={_handleNotificationNavigation}
+      />
     </View>
   );
 };

@@ -20,6 +20,7 @@ export type MainStackParamList = {
 
 export type MainDrawerParamList = {
   DashboardScreen: undefined;
+  NotificationsListingScreen: undefined;
 };
 
 export interface DrawerItemType {
@@ -37,6 +38,7 @@ export type IconType =
   | 'ChevronLeft'
   | 'ChevronDown'
   | 'Cart'
+  | 'Cart2'
   | 'Dashboard'
   | 'Delete'
   | 'Exclamation'
@@ -49,7 +51,8 @@ export type IconType =
   | 'Setting'
   | 'Store'
   | 'Archive'
-  | 'Badge';
+  | 'Badge'
+  | 'BackIcon';
 
 export interface CartTileProps {
   title: string;
@@ -57,4 +60,12 @@ export interface CartTileProps {
   cartCount: number;
   backgroundColor?: string;
   onPress?: () => void;
+}
+
+export interface Notification {
+  id: string;
+  title: string;
+  description: string;
+  time: string;
+  type: 'In-App' | 'Cart';
 }

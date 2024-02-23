@@ -1,4 +1,10 @@
-import {StyleSheet, TouchableOpacity, View} from 'react-native';
+import {
+  StyleProp,
+  StyleSheet,
+  TextStyle,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import defaultStyles from 'utils/defaultStyles';
 import AppText from './AppText';
 import {colors} from 'utils/themes';
@@ -7,6 +13,7 @@ interface Props {
   heading: string;
   trailingText?: string;
   onPressTrailing?: () => void;
+  trailingTextStyle?: StyleProp<TextStyle>;
 }
 const SectionHeading = (props: Props) => {
   return (
@@ -21,7 +28,12 @@ const SectionHeading = (props: Props) => {
       </AppText>
       {props.trailingText && props.trailingText.length > 0 && (
         <TouchableOpacity activeOpacity={0.8} onPress={props.onPressTrailing}>
-          <AppText style={[defaultStyles.textPrimary, styles.trailingText]}>
+          <AppText
+            style={[
+              defaultStyles.textPrimary,
+              styles.trailingText,
+              props.trailingTextStyle,
+            ]}>
             {props.trailingText}
           </AppText>
         </TouchableOpacity>
