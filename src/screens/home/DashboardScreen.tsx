@@ -3,9 +3,10 @@ import SectionHeading from 'components/SectionHeading';
 import VerticalSpacer from 'components/VerticalSpacer';
 import DashboardAppbar from 'components/appbars/DashboardAppbar';
 import SmallTitleIconButton from 'components/buttons/SmallTitleIconButton';
+import CartDetailTile from 'components/tiles/CartDetailTile';
 import NewCartTile from 'components/tiles/NewCartTile';
 import SimpleCartTile from 'components/tiles/SimpleCartTile';
-import {FlatList, ScrollView, StyleSheet, View} from 'react-native';
+import {FlatList, StyleSheet, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {strings} from 'utils/constants';
 import defaultStyles from 'utils/defaultStyles';
@@ -13,13 +14,18 @@ import {rh, rw} from 'utils/dimentions';
 import {colors} from 'utils/themes';
 
 const DashboardScreen = () => {
-  const _renderItem = () => {
-    return <></>;
+  const _renderItem = ({item, index}: {item: any; index: number}) => {
+    return (
+      <CartDetailTile
+        key={index}
+        containerStyle={defaultStyles.marginHorizontal24}
+      />
+    );
   };
 
   const _renderHeader = () => {
     return (
-      <View>
+      <View style={defaultStyles.paddingHorizontal24}>
         <View
           style={[
             defaultStyles.row,
@@ -63,27 +69,29 @@ const DashboardScreen = () => {
         />
         <VerticalSpacer factor={3} />
         <SectionHeading heading="Most Recent" trailingText="View All" />
+        <VerticalSpacer />
       </View>
     );
   };
 
   return (
     <SafeAreaView style={[defaultStyles.bgWhite, defaultStyles.flex1]}>
-      <View style={styles.appbarContainer}>
+      <View style={styles.padded}>
         <DashboardAppbar />
-        <VerticalSpacer />
-        <FlatList
-          data={[]}
-          renderItem={_renderItem}
-          ListHeaderComponent={_renderHeader}
-        />
       </View>
+      <FlatList
+        data={[1, 2, 3]}
+        renderItem={_renderItem}
+        ListHeaderComponent={_renderHeader}
+        ItemSeparatorComponent={() => <VerticalSpacer factor={1.5} />}
+        ListFooterComponent={() => <VerticalSpacer factor={3} />}
+      />
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  appbarContainer: {
+  padded: {
     paddingHorizontal: rw(24),
     paddingVertical: rh(24),
   },
