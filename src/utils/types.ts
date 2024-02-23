@@ -30,6 +30,7 @@ export type SettingStackParamList = {
   SettingsListingScreen: undefined;
   ResetPasswordSettingScreen: undefined;
   PrivacyPolicyScreen: undefined;
+  ConnectWhatsappScreen: undefined;
 };
 
 export type DashboardStackParamList = {
@@ -81,7 +82,8 @@ export type IconType =
   | 'ShopifyGrey'
   | 'Shopify'
   | 'JoomlaGrey'
-  | 'Joomla';
+  | 'Joomla'
+  | 'WhatsappBlack';
 
 export interface CartTileProps {
   title: string;
@@ -105,5 +107,8 @@ export interface SettingMenuItem {
   icon: IconType;
   iconProps?: IconProps;
   bgColor: string;
-  navigation?: 'ResetPasswordSettingScreen' | 'PrivacyPolicyScreen';
+  navigation?:
+    | 'ResetPasswordSettingScreen'
+    | 'PrivacyPolicyScreen'
+    | 'ConnectWhatsappScreen';
 }

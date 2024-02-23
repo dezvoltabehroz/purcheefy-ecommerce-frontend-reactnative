@@ -2,6 +2,7 @@ import {
   NativeStackNavigationOptions,
   createNativeStackNavigator,
 } from '@react-navigation/native-stack';
+import ConnectWhatsappScreen from 'screens/settings/ConnectWhatsappScreen';
 import PrivacyPolicyScreen from 'screens/settings/PrivacyPolicyScreen';
 import ResetPasswordSettingScreen from 'screens/settings/ResetPasswordSettingScreen';
 import SettingsListingScreen from 'screens/settings/SettingsListingScreen';
@@ -27,6 +28,10 @@ const SettingStack = () => {
       <Stack.Screen
         name="PrivacyPolicyScreen"
         component={PrivacyPolicyScreen}
+      />
+      <Stack.Screen
+        name="ConnectWhatsappScreen"
+        component={ConnectWhatsappScreen}
       />
     </Stack.Navigator>
   );

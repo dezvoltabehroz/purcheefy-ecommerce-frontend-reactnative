@@ -26,6 +26,7 @@ const accountOptions: SettingMenuItem[] = [
     title: 'Connect WhatsApp number',
     icon: 'Whatsapp',
     bgColor: '#23C934',
+    navigation: 'ConnectWhatsappScreen',
   },
 ];
 

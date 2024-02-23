@@ -26,6 +26,7 @@ import Badge from './Badge.svg';
 import BackIcon from './BackIcon.svg';
 import Globe from './Globe.svg';
 import Whatsapp from './Whatsapp.svg';
+import WhatsappBlack from './WhatsappBlack.svg';
 import Privacy from './Privacy.svg';
 import Tick from './Tick.svg';
 import DrupalGrey from './DrupalGrey.svg';
@@ -90,6 +91,7 @@ export const getIcon = (
     BackIcon: <BackIcon {...props} />,
     Globe: <Globe {...props} />,
     Whatsapp: <Whatsapp {...props} />,
+    WhatsappBlack: <WhatsappBlack {...props} />,
     Privacy: <Privacy {...props} />,
     Tick: <Tick {...props} />,
     DrupalGrey: <DrupalGrey {...props} />,
