@@ -13,6 +13,7 @@ const accountOptions: SettingMenuItem[] = [
     title: 'Reset Password',
     icon: 'LockWhite',
     bgColor: '#4C61EB',
+    navigation: 'ResetPasswordSettingScreen',
   },
   {
     id: '2',

@@ -2,9 +2,11 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import CustomSidebarMenu from 'components/menus/CustomSidebarMenu';
 import DashboardScreen from 'screens/home/DashboardScreen';
 import NotificationsListingScreen from 'screens/home/NotificationsListingScreen';
+import ResetPasswordSettingScreen from 'screens/home/ResetPasswordSettingScreen';
 import SettingsListingScreen from 'screens/home/SettingsListingScreen';
 import {colors} from 'utils/themes';
 import {MainDrawerParamList} from 'utils/types';
+import SettingStack from './SettingStack';
 
 const Drawer = createDrawerNavigator<MainDrawerParamList>();
 
@@ -24,10 +26,7 @@ const MainDrawerNavigation = () => {
         name="NotificationsListingScreen"
         component={NotificationsListingScreen}
       />
-      <Drawer.Screen
-        name="SettingsListingScreen"
-        component={SettingsListingScreen}
-      />
+      <Drawer.Screen name="SettingStack" component={SettingStack} />
     </Drawer.Navigator>
   );
 };

@@ -1,10 +1,11 @@
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import AppText from 'components/AppText';
 import VerticalSpacer from 'components/VerticalSpacer';
 import SettingTile from 'components/tiles/SettingTile';
-import {StyleSheet, View} from 'react-native';
+import {View} from 'react-native';
 import defaultStyles from 'utils/defaultStyles';
-import {rw} from 'utils/dimentions';
-import {SettingMenuItem} from 'utils/types';
+import {SettingMenuItem, SettingStackParamList} from 'utils/types';
 
 interface Props {
   heading: string;
@@ -12,6 +13,15 @@ interface Props {
 }
 
 const SettingsMenuSection = ({heading, options}: Props) => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<SettingStackParamList>>();
+
+  const _handleItemClick = (option: SettingMenuItem) => {
+    if (option.navigation && option.navigation.length > 0) {
+      navigation.navigate(option.navigation);
+    }
+  };
+
   return (
     <View>
       <AppText fontWeight="medium" style={[defaultStyles.h5]}>
@@ -19,7 +29,11 @@ const SettingsMenuSection = ({heading, options}: Props) => {
       </AppText>
       <VerticalSpacer factor={2} />
       {options.map(d => (
-        <SettingTile settingItem={d} key={d.id} />
+        <SettingTile
+          settingItem={d}
+          key={d.id}
+          onPress={() => _handleItemClick(d)}
+        />
       ))}
     </View>
   );

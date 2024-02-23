@@ -33,7 +33,7 @@ const CustomSidebarMenu = (props: DrawerContentComponentProps) => {
   const _handleItemPressed = (id: string) => {
     if (id == '8') {
       _handleCloseDrawer();
-      navigation.navigate('SettingsListingScreen');
+      navigation.navigate('SettingStack');
     }
   };
 

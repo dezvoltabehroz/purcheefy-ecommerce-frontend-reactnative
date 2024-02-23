@@ -2,6 +2,7 @@ import {IconType} from 'utils/types';
 import Logo from './Logo.svg';
 import Sms from './Sms.svg';
 import Lock from './Lock.svg';
+import LockBlack from './LockBlack.svg';
 import LockWhite from './LockWhite.svg';
 import EyeClose from './EyeClose.svg';
 import Person from './Person.svg';
@@ -26,6 +27,7 @@ import BackIcon from './BackIcon.svg';
 import Globe from './Globe.svg';
 import Whatsapp from './Whatsapp.svg';
 import Privacy from './Privacy.svg';
+import Tick from './Tick.svg';
 
 import {rw} from 'utils/dimentions';
 
@@ -55,6 +57,7 @@ export const getIcon = (
     EyeClose: <EyeClose {...props} />,
     Lock: <Lock {...props} />,
     LockWhite: <LockWhite {...props} />,
+    LockBlack: <LockBlack {...props} />,
     Sms: <Sms {...props} />,
     Person: <Person {...props} />,
     ChevronLeft: <ChevronLeft {...props} />,
@@ -78,6 +81,7 @@ export const getIcon = (
     Globe: <Globe {...props} />,
     Whatsapp: <Whatsapp {...props} />,
     Privacy: <Privacy {...props} />,
+    Tick: <Tick {...props} />,
   };
   return icons[iconName];
 };

@@ -23,7 +23,12 @@ export type MainStackParamList = {
 export type MainDrawerParamList = {
   DashboardScreen: undefined;
   NotificationsListingScreen: undefined;
+  SettingStack: undefined;
+};
+
+export type SettingStackParamList = {
   SettingsListingScreen: undefined;
+  ResetPasswordSettingScreen: undefined;
 };
 
 export interface DrawerItemType {
@@ -59,7 +64,9 @@ export type IconType =
   | 'Globe'
   | 'Whatsapp'
   | 'Privacy'
-  | 'LockWhite';
+  | 'LockWhite'
+  | 'LockBlack'
+  | 'Tick';
 
 export interface CartTileProps {
   title: string;
@@ -83,4 +90,5 @@ export interface SettingMenuItem {
   icon: IconType;
   iconProps?: IconProps;
   bgColor: string;
+  navigation?: 'ResetPasswordSettingScreen';
 }

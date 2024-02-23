@@ -1,18 +1,21 @@
 import {getIcon} from 'assets/icons';
 import AppText from 'components/AppText';
 import HorizontalSpacer from 'components/HorizontalSpacer';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import defaultStyles from 'utils/defaultStyles';
 import {rh, rw} from 'utils/dimentions';
 import {SettingMenuItem} from 'utils/types';
 
 interface Props {
   settingItem: SettingMenuItem;
+  onPress?: () => void;
 }
 
-const SettingTile = ({settingItem}: Props) => {
+const SettingTile = ({settingItem, onPress}: Props) => {
   return (
-    <View
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={onPress}
       style={[
         defaultStyles.row,
         defaultStyles.alignItemsCenter,
@@ -27,7 +30,7 @@ const SettingTile = ({settingItem}: Props) => {
         <AppText style={defaultStyles.h6}>{settingItem.title}</AppText>
       </View>
       {getIcon('ChevronLeft', {width: rw(16), scaleX: -1})}
-    </View>
+    </TouchableOpacity>
   );
 };
 
