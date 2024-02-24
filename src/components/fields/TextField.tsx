@@ -175,6 +175,7 @@ const styles = StyleSheet.create({
     color: colors.black,
     // fontFamily: fonts.Poppins.regular,
     paddingHorizontal: rw(8),
+    paddingVertical: rh(10.5),
     flex: 1,
   },
   paddedStart: {
