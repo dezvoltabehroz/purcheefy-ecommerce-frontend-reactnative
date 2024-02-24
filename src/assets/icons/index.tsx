@@ -56,7 +56,6 @@ const defaultProps: IconProps = {
   width: rw(30),
   height: rw(30),
   scaleX: 1,
-  // color: 'red',
 };
 
 export const getIcon = (
