@@ -108,6 +108,7 @@ const TextField = ({
         <TextInput
           style={[
             styles.input,
+            !leadingIcon && {paddingHorizontal: rw(16)},
             isFocused && styles.inputFocused,
             {
               textAlignVertical:

@@ -31,9 +31,14 @@ const CustomSidebarMenu = (props: DrawerContentComponentProps) => {
   };
 
   const _handleItemPressed = (id: string) => {
-    if (id == '8') {
-      _handleCloseDrawer();
-      navigation.navigate('SettingStack');
+    _handleCloseDrawer();
+    switch (id) {
+      case '8':
+        navigation.navigate('SettingStack');
+        break;
+      case '3':
+        navigation.navigate('DashboardStack', {screen: 'StoresListingScreen'});
+        break;
     }
   };
 

@@ -1,3 +1,4 @@
+import {NavigatorScreenParams} from '@react-navigation/native';
 import {IconProps} from 'assets/icons';
 
 export type FontFamily = 'Poppins';
@@ -23,7 +24,7 @@ export type MainStackParamList = {
 export type MainDrawerParamList = {
   NotificationsListingScreen: undefined;
   SettingStack: undefined;
-  DashboardStack: undefined;
+  DashboardStack: NavigatorScreenParams<DashboardStackParamList>;
 };
 
 export type SettingStackParamList = {
@@ -36,6 +37,8 @@ export type SettingStackParamList = {
 
 export type DashboardStackParamList = {
   DashboardScreen: undefined;
+  StoresListingScreen: undefined;
+  AddStoreDetailsScreen: undefined;
 };
 
 export interface DrawerItemType {
@@ -113,4 +116,15 @@ export interface SettingMenuItem {
     | 'PrivacyPolicyScreen'
     | 'ConnectWhatsappScreen'
     | 'ChangeLanguageScreen';
+}
+
+export interface StoreType {
+  id: string;
+  title: string;
+  activeIcon: IconType;
+  activeIconProps?: IconProps;
+  disabledIcon: IconType;
+  disabledIconProps?: IconProps;
+  activeBgColor: string;
+  activeBorderColor: string;
 }

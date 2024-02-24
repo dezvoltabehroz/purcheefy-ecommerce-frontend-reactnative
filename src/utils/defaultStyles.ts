@@ -134,6 +134,9 @@ export default StyleSheet.create({
   paddingHorizontal24: {
     paddingHorizontal: rw(24),
   },
+  paddingVertical24: {
+    paddingVertical: rh(24),
+  },
   marginHorizontal24: {
     marginHorizontal: rw(24),
   },
