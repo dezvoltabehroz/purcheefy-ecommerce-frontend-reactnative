@@ -39,6 +39,7 @@ export type DashboardStackParamList = {
   DashboardScreen: undefined;
   StoresListingScreen: undefined;
   AddStoreDetailsScreen: undefined;
+  CartListingScreen: undefined;
 };
 
 export interface DrawerItemType {
@@ -87,7 +88,9 @@ export type IconType =
   | 'Shopify'
   | 'JoomlaGrey'
   | 'Joomla'
-  | 'WhatsappBlack';
+  | 'WhatsappBlack'
+  | 'Search'
+  | 'Filter';
 
 export interface CartTileProps {
   title: string;

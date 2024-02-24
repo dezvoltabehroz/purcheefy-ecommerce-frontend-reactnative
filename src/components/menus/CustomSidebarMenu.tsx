@@ -39,6 +39,11 @@ const CustomSidebarMenu = (props: DrawerContentComponentProps) => {
       case '3':
         navigation.navigate('DashboardStack', {screen: 'StoresListingScreen'});
         break;
+      case '4':
+      case '5':
+      case '6':
+        navigation.navigate('DashboardStack', {screen: 'CartListingScreen'});
+        break;
     }
   };
 

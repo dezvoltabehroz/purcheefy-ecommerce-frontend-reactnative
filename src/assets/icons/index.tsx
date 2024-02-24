@@ -39,6 +39,8 @@ import ShopifyGrey from './ShopifyGrey.svg';
 import Shopify from './Shopify.svg';
 import WordpressGrey from './WordpressGrey.svg';
 import Wordpress from './Wordpress.svg';
+import Search from './Search.svg';
+import Filter from './Filter.svg';
 
 import {rw} from 'utils/dimentions';
 
@@ -103,6 +105,8 @@ export const getIcon = (
     Shopify: <Shopify {...props} />,
     JoomlaGrey: <JoomlaGrey {...props} />,
     Joomla: <Joomla {...props} />,
+    Search: <Search {...props} />,
+    Filter: <Filter {...props} />,
   };
   return icons[iconName];
 };
