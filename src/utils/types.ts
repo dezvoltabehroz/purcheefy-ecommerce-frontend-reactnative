@@ -40,6 +40,7 @@ export type DashboardStackParamList = {
   StoresListingScreen: undefined;
   AddStoreDetailsScreen: undefined;
   CartListingScreen: undefined;
+  CartDetailScreen: undefined;
 };
 
 export interface DrawerItemType {
@@ -90,7 +91,9 @@ export type IconType =
   | 'Joomla'
   | 'WhatsappBlack'
   | 'Search'
-  | 'Filter';
+  | 'Filter'
+  | 'NoteFill'
+  | 'PersonFill';
 
 export interface CartTileProps {
   title: string;
@@ -98,6 +101,11 @@ export interface CartTileProps {
   cartCount: number;
   backgroundColor?: string;
   onPress?: () => void;
+  cartType?: CartType;
+  createdAt?: string;
+  attemptsCount?: number;
+  recoveredOn?: string;
+  cartLeftSince?: string;
 }
 
 export interface Notification {
@@ -131,3 +139,5 @@ export interface StoreType {
   activeBgColor: string;
   activeBorderColor: string;
 }
+
+export type CartType = 'Abandoned' | 'Active' | 'Recovered';

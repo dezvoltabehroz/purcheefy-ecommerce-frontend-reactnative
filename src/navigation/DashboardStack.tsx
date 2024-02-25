@@ -1,4 +1,5 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import CartDetailScreen from 'screens/dashboard/CartDetailScreen';
 import CartListingScreen from 'screens/dashboard/CartListingScreen';
 import DashboardScreen from 'screens/dashboard/DashboardScreen';
 import AddStoreDetailsScreen from 'screens/home/AddStoreDetailsScreen';
@@ -20,6 +21,7 @@ const DashboardStack = () => {
         component={AddStoreDetailsScreen}
       />
       <Stack.Screen name="CartListingScreen" component={CartListingScreen} />
+      <Stack.Screen name="CartDetailScreen" component={CartDetailScreen} />
     </Stack.Navigator>
   );
 };

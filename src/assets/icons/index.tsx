@@ -41,6 +41,8 @@ import WordpressGrey from './WordpressGrey.svg';
 import Wordpress from './Wordpress.svg';
 import Search from './Search.svg';
 import Filter from './Filter.svg';
+import PersonFill from './PersonFill.svg';
+import NoteFill from './NoteFill.svg';
 
 import {rw} from 'utils/dimentions';
 
@@ -107,6 +109,8 @@ export const getIcon = (
     Joomla: <Joomla {...props} />,
     Search: <Search {...props} />,
     Filter: <Filter {...props} />,
+    NoteFill: <NoteFill {...props} />,
+    PersonFill: <PersonFill {...props} />,
   };
   return icons[iconName];
 };

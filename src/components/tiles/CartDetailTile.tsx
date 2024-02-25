@@ -15,13 +15,15 @@ import {colors} from 'utils/themes';
 
 interface Props {
   containerStyle?: StyleProp<ViewStyle>;
+  onPress?: () => void;
 }
 
 const CartDetailTile = (props: Props) => {
   return (
     <TouchableOpacity
       activeOpacity={0.8}
-      style={[styles.container, props.containerStyle]}>
+      style={[styles.container, props.containerStyle]}
+      onPress={props.onPress}>
       <Image source={images.product} style={styles.image} />
       <View style={[defaultStyles.flex1]}>
         <AppText fontWeight="medium" style={[defaultStyles.h6]}>

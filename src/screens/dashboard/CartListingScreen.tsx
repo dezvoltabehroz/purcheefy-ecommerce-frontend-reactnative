@@ -1,7 +1,10 @@
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {getIcon} from 'assets/icons';
 import HorizontalSpacer from 'components/HorizontalSpacer';
 import VerticalSpacer from 'components/VerticalSpacer';
 import MinimalAppbar from 'components/appbars/MinimalAppbar';
+import CartTypeButtonsGroup from 'components/buttons/CartTypeButtonsGroup';
 import TextField from 'components/fields/TextField';
 import CartDetailTile from 'components/tiles/CartDetailTile';
 import {useState} from 'react';
@@ -9,15 +12,20 @@ import {FlatList, StyleSheet, TouchableOpacity, View} from 'react-native';
 import defaultStyles from 'utils/defaultStyles';
 import {rh, rw} from 'utils/dimentions';
 import {colors} from 'utils/themes';
+import {CartType, DashboardStackParamList} from 'utils/types';
 
 interface FormValues {
   searchQuery: string;
 }
 
 const CartListingScreen = () => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<DashboardStackParamList>>();
+
   const [formState, setFormState] = useState<FormValues>({
     searchQuery: '',
   });
+  const [selectedType, setSelectedType] = useState<CartType>('Abandoned');
 
   const _handleChangeText = (name: string, value: string) => {
     setFormState(oldValues => ({...oldValues, [name]: value}));
@@ -45,6 +53,12 @@ const CartListingScreen = () => {
             {getIcon('Filter', {width: rw(24), height: rw(24)})}
           </TouchableOpacity>
         </View>
+        <VerticalSpacer factor={3} />
+
+        <CartTypeButtonsGroup
+          selectedType={selectedType}
+          onPressType={setSelectedType}
+        />
       </View>
     );
   };
@@ -54,6 +68,7 @@ const CartListingScreen = () => {
       <CartDetailTile
         key={index}
         containerStyle={defaultStyles.marginHorizontal24}
+        onPress={() => navigation.navigate('CartDetailScreen')}
       />
     );
   };

@@ -149,4 +149,7 @@ export default StyleSheet.create({
   paddingHorizontal20: {
     paddingHorizontal: rw(24),
   },
+  bgTransparent: {
+    backgroundColor: colors.transparent,
+  },
 });
