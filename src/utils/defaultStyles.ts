@@ -140,6 +140,10 @@ export default StyleSheet.create({
   marginHorizontal24: {
     marginHorizontal: rw(24),
   },
+  marginHorizontal18: {
+    marginHorizontal: rw(18),
+  },
+
   marginHorizontal20: {
     marginHorizontal: rw(20),
   },
