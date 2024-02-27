@@ -15,7 +15,10 @@ interface Props {
 
 const IconTextButton = (props: Props) => {
   return (
-    <TouchableOpacity activeOpacity={0.8} style={styles.container}>
+    <TouchableOpacity
+      activeOpacity={0.8}
+      style={styles.container}
+      onPress={props.onPress}>
       <View style={styles.iconContainer}>
         {getIcon(props.icon, {width: rw(20), height: rh(20)})}
       </View>

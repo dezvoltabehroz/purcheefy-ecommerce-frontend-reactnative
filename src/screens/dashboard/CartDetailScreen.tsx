@@ -1,3 +1,5 @@
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import HorizontalSpacer from 'components/HorizontalSpacer';
 import SectionHeading from 'components/SectionHeading';
 import VerticalSpacer from 'components/VerticalSpacer';
@@ -10,8 +12,12 @@ import {FlatList, StyleSheet, View} from 'react-native';
 import defaultStyles from 'utils/defaultStyles';
 import {rh, rw} from 'utils/dimentions';
 import {colors} from 'utils/themes';
+import {DashboardStackParamList} from 'utils/types';
 
 const CartDetailScreen = () => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<DashboardStackParamList>>();
+
   const _renderItem = ({item, index}: {item: any; index: number}) => {
     return (
       <CartItemTile
@@ -48,7 +54,11 @@ const CartDetailScreen = () => {
         <View style={[defaultStyles.row]}>
           <IconTextButton icon="PersonFill" text="Shopper's profile" />
           <HorizontalSpacer factor={1.3} />
-          <IconTextButton icon="NoteFill" text="Follow up notes" />
+          <IconTextButton
+            icon="NoteFill"
+            text="Follow up notes"
+            onPress={() => navigation.navigate('NotesListingScreen')}
+          />
         </View>
       </View>
       <View

@@ -41,6 +41,7 @@ export type DashboardStackParamList = {
   AddStoreDetailsScreen: undefined;
   CartListingScreen: undefined;
   CartDetailScreen: undefined;
+  NotesListingScreen: undefined;
 };
 
 export interface DrawerItemType {
