@@ -25,6 +25,7 @@ const NotificationsListingScreen = () => {
           heading="Recent"
           trailingText="Clear All"
           trailingTextStyle={styles.trailingHeading}
+          badgeText="2"
         />
         <VerticalSpacer factor={2} />
       </View>

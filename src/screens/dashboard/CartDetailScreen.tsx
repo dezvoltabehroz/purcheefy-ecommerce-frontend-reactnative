@@ -1,13 +1,16 @@
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {getIcon} from 'assets/icons';
 import HorizontalSpacer from 'components/HorizontalSpacer';
 import SectionHeading from 'components/SectionHeading';
 import VerticalSpacer from 'components/VerticalSpacer';
 import MinimalAppbar from 'components/appbars/MinimalAppbar';
 import BigButton from 'components/buttons/BigButton';
 import IconTextButton from 'components/buttons/IconTextButton';
+import SuccessModal from 'components/modals/SuccessModal';
 import CartItemTile from 'components/tiles/CartItemTile';
 import DetailedCartTile from 'components/tiles/DetailedCartTile';
+import {useState} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
 import defaultStyles from 'utils/defaultStyles';
 import {rh, rw} from 'utils/dimentions';
@@ -17,6 +20,7 @@ import {DashboardStackParamList} from 'utils/types';
 const CartDetailScreen = () => {
   const navigation =
     useNavigation<NativeStackNavigationProp<DashboardStackParamList>>();
+  const [showArchiveModal, setShowArchiveModal] = useState(false);
 
   const _renderItem = ({item, index}: {item: any; index: number}) => {
     return (
@@ -84,6 +88,7 @@ const CartDetailScreen = () => {
               borderColor="rgba(243, 112, 36, 0.25)"
               showPrimaryBorder
               color={colors.primaryDark}
+              onPress={() => setShowArchiveModal(true)}
             />
           </View>
           <HorizontalSpacer factor={1.5} />
@@ -93,6 +98,22 @@ const CartDetailScreen = () => {
         </View>
         <VerticalSpacer />
       </View>
+      <SuccessModal
+        title="Are you sure you want to archive this cart?"
+        description="When you archive a cart, it means that the shopper is not interested anymore."
+        primaryButtonTitle="Archive it"
+        secondaryButtonTitle="Cancel"
+        visible={showArchiveModal}
+        onClose={() => setShowArchiveModal(false)}>
+        <View
+          style={[
+            defaultStyles.center,
+            styles.thumbContainer,
+            defaultStyles.alignSelfCenter,
+          ]}>
+          {getIcon('ArchiveWhite', {width: rw(44), height: rw(44)})}
+        </View>
+      </SuccessModal>
     </View>
   );
 };
@@ -108,6 +129,13 @@ const styles = StyleSheet.create({
   },
   list: {
     paddingVertical: 24,
+  },
+  thumbContainer: {
+    width: rw(78),
+    height: rw(78),
+    borderRadius: rw(78),
+    backgroundColor: colors.primary,
+    ...defaultStyles.center,
   },
 });
 

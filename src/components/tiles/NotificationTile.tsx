@@ -25,7 +25,11 @@ const NotificationTile = ({notification, onPress, containerStyle}: Props) => {
     <TouchableOpacity
       activeOpacity={0.8}
       onPress={onPress}
-      style={[styles.container, containerStyle]}>
+      style={[
+        styles.container,
+        containerStyle,
+        !notification.read && styles.unreadNotification,
+      ]}>
       <View
         style={[
           styles.iconContainer,
@@ -64,6 +68,9 @@ const styles = StyleSheet.create({
     paddingVertical: rh(12),
     flexDirection: 'row',
     alignItems: 'flex-start',
+  },
+  unreadNotification: {
+    backgroundColor: '#F3702426',
   },
   iconContainer: {
     width: rw(44),

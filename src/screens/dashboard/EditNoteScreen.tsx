@@ -1,3 +1,5 @@
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import AppText from 'components/AppText';
 import VerticalSpacer from 'components/VerticalSpacer';
 import MinimalAppbar from 'components/appbars/MinimalAppbar';
@@ -8,6 +10,7 @@ import {useState} from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import defaultStyles from 'utils/defaultStyles';
 import {colors} from 'utils/themes';
+import {DashboardStackParamList} from 'utils/types';
 
 interface FormValues {
   title: string;
@@ -15,6 +18,9 @@ interface FormValues {
 }
 
 const EditNoteScreen = () => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<DashboardStackParamList>>();
+
   const [formState, setFormState] = useState<FormValues>({
     title: '',
     description: '',
@@ -56,7 +62,10 @@ const EditNoteScreen = () => {
       </ScrollView>
       <VerticalSpacer />
       <View style={defaultStyles.paddingHorizontal24}>
-        <BigButton title="Add new note" />
+        <BigButton
+          title="Add new note"
+          onPress={() => navigation.navigate('NoteDetailScreen')}
+        />
       </View>
       <VerticalSpacer factor={2} />
     </View>

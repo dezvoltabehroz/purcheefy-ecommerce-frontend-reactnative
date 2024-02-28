@@ -43,6 +43,7 @@ export type DashboardStackParamList = {
   CartDetailScreen: undefined;
   NotesListingScreen: undefined;
   EditNoteScreen: undefined;
+  NoteDetailScreen: undefined;
 };
 
 export interface DrawerItemType {
@@ -97,7 +98,8 @@ export type IconType =
   | 'NoteFill'
   | 'PersonFill'
   | 'MenuDots'
-  | 'Plus';
+  | 'Plus'
+  | 'ArchiveWhite';
 
 export interface CartTileProps {
   title: string;
@@ -118,6 +120,7 @@ export interface Notification {
   description: string;
   time: string;
   type: 'In-App' | 'Cart';
+  read: boolean;
 }
 
 export interface SettingMenuItem {

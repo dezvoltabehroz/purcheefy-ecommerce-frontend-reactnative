@@ -7,6 +7,7 @@ export const notificationsData: Notification[] = [
     description: 'check your history for full details',
     time: 'Today at 9:42 AM',
     type: 'In-App',
+    read: false,
   },
   {
     id: '2',
@@ -14,6 +15,7 @@ export const notificationsData: Notification[] = [
     description: 'check your history for full details',
     time: 'Today at 9:42 AM',
     type: 'Cart',
+    read: false,
   },
   {
     id: '3',
@@ -21,6 +23,7 @@ export const notificationsData: Notification[] = [
     description: 'check your history for full details',
     time: 'Today at 9:42 AM',
     type: 'In-App',
+    read: true,
   },
   {
     id: '4',
@@ -28,6 +31,7 @@ export const notificationsData: Notification[] = [
     description: 'check your history for full details',
     time: 'Today at 9:42 AM',
     type: 'In-App',
+    read: true,
   },
   {
     id: '5',
@@ -35,6 +39,7 @@ export const notificationsData: Notification[] = [
     description: 'check your history for full details',
     time: 'Today at 9:42 AM',
     type: 'In-App',
+    read: true,
   },
   {
     id: '6',
@@ -42,5 +47,6 @@ export const notificationsData: Notification[] = [
     description: 'check your history for full details',
     time: 'Today at 9:42 AM',
     type: 'Cart',
+    read: true,
   },
 ];

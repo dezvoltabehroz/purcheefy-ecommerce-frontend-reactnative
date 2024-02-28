@@ -5,4 +5,5 @@ export default {
   product: require('./product.png'),
   english: require('./english.png'),
   arabic: require('./arabic.png'),
+  noteImage: require('./noteImage.jpeg'),
 };

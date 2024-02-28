@@ -22,6 +22,7 @@ import Profile from './Profile.svg';
 import Setting from './Setting.svg';
 import Store from './Store.svg';
 import Archive from './Archive.svg';
+import ArchiveWhite from './ArchiveWhite.svg';
 import Badge from './Badge.svg';
 import BackIcon from './BackIcon.svg';
 import Globe from './Globe.svg';
@@ -91,6 +92,7 @@ export const getIcon = (
     Setting: <Setting {...props} />,
     Store: <Store {...props} />,
     Archive: <Archive {...props} />,
+    ArchiveWhite: <ArchiveWhite {...props} />,
     Badge: <Badge {...props} />,
     ChevronDown: <ChevronDown {...props} />,
     BackIcon: <BackIcon {...props} />,
