@@ -16,6 +16,7 @@ interface Props {
   description?: string;
   primaryButtonTitle?: string;
   secondaryButtonTitle?: string;
+  onPressPrimaryButton?: () => void;
 }
 
 const SuccessModal = ({
@@ -26,6 +27,7 @@ const SuccessModal = ({
   description = strings.pressLogin,
   primaryButtonTitle = strings.login,
   secondaryButtonTitle,
+  onPressPrimaryButton,
 }: PropsWithChildren<Props>) => {
   return (
     <CenteredModal visible={visible} onClose={onClose}>
@@ -43,7 +45,10 @@ const SuccessModal = ({
           {description}
         </AppText>
         <VerticalSpacer factor={2} />
-        <BigButton title={primaryButtonTitle} onPress={onClose} />
+        <BigButton
+          title={primaryButtonTitle}
+          onPress={onPressPrimaryButton ?? onClose}
+        />
         {secondaryButtonTitle && secondaryButtonTitle.length > 0 && (
           <>
             <VerticalSpacer factor={1.5} />

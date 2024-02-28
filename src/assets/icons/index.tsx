@@ -9,10 +9,13 @@ import Person from './Person.svg';
 import ChevronLeft from './ChevronLeft.svg';
 import ChevronDown from './ChevronDown.svg';
 import Cart from './Cart.svg';
+import Card from './Card.svg';
 import Cart2 from './Cart2.svg';
 import Dashboard from './Dashboard.svg';
 import Delete from './Delete.svg';
+import DeleteWhite from './DeleteWhite.svg';
 import Exclamation from './Exclamation.svg';
+import Exclamation2 from './Exclamation2.svg';
 import Logout from './Logout.svg';
 import Menu from './Menu.svg';
 import MenuVertical from './MenuVertical.svg';
@@ -82,7 +85,9 @@ export const getIcon = (
     Cart2: <Cart2 {...props} />,
     Dashboard: <Dashboard {...props} />,
     Delete: <Delete {...props} />,
+    DeleteWhite: <DeleteWhite {...props} />,
     Exclamation: <Exclamation {...props} />,
+    Exclamation2: <Exclamation2 {...props} />,
     Logout: <Logout {...props} />,
     Menu: <Menu {...props} />,
     MenuVertical: <MenuVertical {...props} />,
@@ -117,6 +122,7 @@ export const getIcon = (
     PersonFill: <PersonFill {...props} />,
     MenuDots: <MenuDots {...props} />,
     Plus: <Plus {...props} />,
+    Card: <Card {...props} />,
   };
   return icons[iconName];
 };

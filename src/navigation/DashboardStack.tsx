@@ -1,4 +1,5 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import AddCardScreen from 'screens/dashboard/AddCardScreen';
 import CartDetailScreen from 'screens/dashboard/CartDetailScreen';
 import CartListingScreen from 'screens/dashboard/CartListingScreen';
 import DashboardScreen from 'screens/dashboard/DashboardScreen';
@@ -28,6 +29,7 @@ const DashboardStack = () => {
       <Stack.Screen name="NotesListingScreen" component={NotesListingScreen} />
       <Stack.Screen name="EditNoteScreen" component={EditNoteScreen} />
       <Stack.Screen name="NoteDetailScreen" component={NoteDetailScreen} />
+      <Stack.Screen name="AddCardScreen" component={AddCardScreen} />
     </Stack.Navigator>
   );
 };

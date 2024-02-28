@@ -1,19 +1,36 @@
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {getIcon} from 'assets/icons';
 import AppText from 'components/AppText';
 import SectionHeading from 'components/SectionHeading';
 import VerticalSpacer from 'components/VerticalSpacer';
 import DashboardAppbar from 'components/appbars/DashboardAppbar';
 import SmallTitleIconButton from 'components/buttons/SmallTitleIconButton';
+import SuccessModal from 'components/modals/SuccessModal';
 import CartDetailTile from 'components/tiles/CartDetailTile';
 import NewCartTile from 'components/tiles/NewCartTile';
 import SimpleCartTile from 'components/tiles/SimpleCartTile';
+import {useState} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {strings} from 'utils/constants';
 import defaultStyles from 'utils/defaultStyles';
 import {rh, rw} from 'utils/dimentions';
 import {colors} from 'utils/themes';
+import {DashboardStackParamList} from 'utils/types';
 
 const DashboardScreen = () => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<DashboardStackParamList>>();
+  const [showSubscriptionModal, setShowSubscriptionModal] = useState(true);
+
+  const _handleSubscriptionNavigation = () => {
+    setShowSubscriptionModal(false);
+    setTimeout(() => {
+      navigation.navigate('AddCardScreen');
+    }, 300);
+  };
+
   const _renderItem = ({item, index}: {item: any; index: number}) => {
     return (
       <CartDetailTile
@@ -86,6 +103,23 @@ const DashboardScreen = () => {
         ItemSeparatorComponent={() => <VerticalSpacer factor={1.5} />}
         ListFooterComponent={() => <VerticalSpacer factor={3} />}
       />
+      <SuccessModal
+        title="Your 7 day's free trial expire."
+        description="When you archive a cart, it means that the shopper is not interested anymore."
+        primaryButtonTitle="Subscribe Now"
+        secondaryButtonTitle="Cancel"
+        visible={showSubscriptionModal}
+        onPressPrimaryButton={_handleSubscriptionNavigation}
+        onClose={() => setShowSubscriptionModal(false)}>
+        <View
+          style={[
+            defaultStyles.center,
+            styles.thumbContainer,
+            defaultStyles.alignSelfCenter,
+          ]}>
+          {getIcon('Exclamation2', {width: rw(9), height: rw(38)})}
+        </View>
+      </SuccessModal>
     </SafeAreaView>
   );
 };
@@ -94,6 +128,13 @@ const styles = StyleSheet.create({
   padded: {
     paddingHorizontal: rw(24),
     paddingVertical: rh(24),
+  },
+  thumbContainer: {
+    width: rw(62),
+    height: rw(62),
+    borderRadius: rw(62),
+    backgroundColor: colors.primary,
+    ...defaultStyles.center,
   },
 });
 

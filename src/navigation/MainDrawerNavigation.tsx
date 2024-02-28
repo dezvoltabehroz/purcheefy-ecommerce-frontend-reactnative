@@ -16,6 +16,7 @@ const MainDrawerNavigation = () => {
         // swipeEnabled: false,
         drawerStyle: {
           backgroundColor: colors.white,
+          width: '80%',
         },
       }}
       drawerContent={props => <CustomSidebarMenu {...props} />}>

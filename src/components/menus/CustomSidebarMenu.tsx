@@ -21,9 +21,12 @@ import {DrawerActions} from '@react-navigation/native';
 import {Switch} from 'react-native-gesture-handler';
 import {colors} from 'utils/themes';
 import {useState} from 'react';
+import BigButton from 'components/buttons/BigButton';
+import SuccessModal from 'components/modals/SuccessModal';
 
 const CustomSidebarMenu = (props: DrawerContentComponentProps) => {
   const navigation = useNavigation<DrawerNavigationProp<MainDrawerParamList>>();
+  const [showDeleteAccountModal, setShowDeleteAccountModal] = useState(false);
   const [notifications, setNotifications] = useState(false);
 
   const _handleCloseDrawer = () => {
@@ -43,6 +46,9 @@ const CustomSidebarMenu = (props: DrawerContentComponentProps) => {
       case '5':
       case '6':
         navigation.navigate('DashboardStack', {screen: 'CartListingScreen'});
+        break;
+      case '7':
+        setShowDeleteAccountModal(true);
         break;
     }
   };
@@ -78,6 +84,8 @@ const CustomSidebarMenu = (props: DrawerContentComponentProps) => {
             </TouchableOpacity>
           </View>
         ))}
+        <VerticalSpacer />
+        <BigButton title="Subscribe Now" />
       </DrawerContentScrollView>
       <TouchableOpacity
         activeOpacity={0.8}
@@ -89,6 +97,22 @@ const CustomSidebarMenu = (props: DrawerContentComponentProps) => {
         </AppText>
       </TouchableOpacity>
       <VerticalSpacer factor={2} />
+      <SuccessModal
+        title="Are you sure you want to Delete your account?"
+        description="When you archive a cart, it means that the shopper is not interested anymore."
+        primaryButtonTitle="Yes"
+        secondaryButtonTitle="Cancel"
+        visible={showDeleteAccountModal}
+        onClose={() => setShowDeleteAccountModal(false)}>
+        <View
+          style={[
+            defaultStyles.center,
+            styles.thumbContainer,
+            defaultStyles.alignSelfCenter,
+          ]}>
+          {getIcon('DeleteWhite', {width: rw(44), height: rw(44)})}
+        </View>
+      </SuccessModal>
     </SafeAreaView>
   );
 };
@@ -103,6 +127,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     alignItems: 'center',
+  },
+  thumbContainer: {
+    width: rw(78),
+    height: rw(78),
+    borderRadius: rw(78),
+    backgroundColor: '#FF0000',
+    ...defaultStyles.center,
   },
 });
 

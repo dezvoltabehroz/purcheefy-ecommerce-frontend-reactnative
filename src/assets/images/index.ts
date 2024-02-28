@@ -6,4 +6,5 @@ export default {
   english: require('./english.png'),
   arabic: require('./arabic.png'),
   noteImage: require('./noteImage.jpeg'),
+  loading: require('./loading.gif'),
 };

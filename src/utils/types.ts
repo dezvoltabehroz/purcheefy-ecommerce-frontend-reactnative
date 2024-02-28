@@ -44,6 +44,7 @@ export type DashboardStackParamList = {
   NotesListingScreen: undefined;
   EditNoteScreen: undefined;
   NoteDetailScreen: undefined;
+  AddCardScreen: undefined;
 };
 
 export interface DrawerItemType {
@@ -64,7 +65,10 @@ export type IconType =
   | 'Cart2'
   | 'Dashboard'
   | 'Delete'
+  | 'DeleteWhite'
   | 'Exclamation'
+  | 'Exclamation2'
+  | 'Card'
   | 'Logout'
   | 'Menu'
   | 'MenuVertical'
