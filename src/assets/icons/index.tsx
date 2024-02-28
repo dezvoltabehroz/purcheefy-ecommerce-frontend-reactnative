@@ -43,6 +43,8 @@ import Search from './Search.svg';
 import Filter from './Filter.svg';
 import PersonFill from './PersonFill.svg';
 import NoteFill from './NoteFill.svg';
+import MenuDots from './MenuDots.svg';
+import Plus from './Plus.svg';
 
 import {rw} from 'utils/dimentions';
 
@@ -111,6 +113,8 @@ export const getIcon = (
     Filter: <Filter {...props} />,
     NoteFill: <NoteFill {...props} />,
     PersonFill: <PersonFill {...props} />,
+    MenuDots: <MenuDots {...props} />,
+    Plus: <Plus {...props} />,
   };
   return icons[iconName];
 };

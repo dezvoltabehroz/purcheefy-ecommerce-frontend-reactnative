@@ -42,6 +42,7 @@ export type DashboardStackParamList = {
   CartListingScreen: undefined;
   CartDetailScreen: undefined;
   NotesListingScreen: undefined;
+  EditNoteScreen: undefined;
 };
 
 export interface DrawerItemType {
@@ -94,7 +95,9 @@ export type IconType =
   | 'Search'
   | 'Filter'
   | 'NoteFill'
-  | 'PersonFill';
+  | 'PersonFill'
+  | 'MenuDots'
+  | 'Plus';
 
 export interface CartTileProps {
   title: string;
