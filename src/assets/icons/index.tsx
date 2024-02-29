@@ -49,6 +49,7 @@ import PersonFill from './PersonFill.svg';
 import NoteFill from './NoteFill.svg';
 import MenuDots from './MenuDots.svg';
 import Plus from './Plus.svg';
+import Question from './Question.svg';
 
 import {rw} from 'utils/dimentions';
 
@@ -123,6 +124,7 @@ export const getIcon = (
     MenuDots: <MenuDots {...props} />,
     Plus: <Plus {...props} />,
     Card: <Card {...props} />,
+    Question: <Question {...props} />,
   };
   return icons[iconName];
 };

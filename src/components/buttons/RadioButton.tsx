@@ -22,6 +22,7 @@ const RadioButton = (props: Props) => {
   return (
     <TouchableOpacity
       activeOpacity={0.8}
+      onPress={props.onPress}
       style={[
         defaultStyles.row,
         defaultStyles.alignItemsCenter,

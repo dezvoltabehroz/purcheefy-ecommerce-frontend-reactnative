@@ -76,7 +76,7 @@ const MinimalAppbar = ({
       {children ?? (
         <AppText
           fontWeight="semiBold"
-          style={[defaultStyles.textBlack, defaultStyles.h5]}>
+          style={[defaultStyles.textBlack, defaultStyles.h5, {top: 1.5}]}>
           {title}
         </AppText>
       )}

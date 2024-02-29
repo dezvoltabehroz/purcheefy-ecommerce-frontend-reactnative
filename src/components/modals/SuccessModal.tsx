@@ -25,7 +25,7 @@ const SuccessModal = ({
   children,
   title = strings.passwordUpdated,
   description = strings.pressLogin,
-  primaryButtonTitle = strings.login,
+  primaryButtonTitle,
   secondaryButtonTitle,
   onPressPrimaryButton,
 }: PropsWithChildren<Props>) => {
@@ -44,11 +44,15 @@ const SuccessModal = ({
           style={[defaultStyles.textGrey4, defaultStyles.textAlignCenter]}>
           {description}
         </AppText>
-        <VerticalSpacer factor={2} />
-        <BigButton
-          title={primaryButtonTitle}
-          onPress={onPressPrimaryButton ?? onClose}
-        />
+        {primaryButtonTitle && primaryButtonTitle.length > 0 && (
+          <>
+            <VerticalSpacer factor={2} />
+            <BigButton
+              title={primaryButtonTitle}
+              onPress={onPressPrimaryButton ?? onClose}
+            />
+          </>
+        )}
         {secondaryButtonTitle && secondaryButtonTitle.length > 0 && (
           <>
             <VerticalSpacer factor={1.5} />

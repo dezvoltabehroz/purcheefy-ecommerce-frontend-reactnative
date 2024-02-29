@@ -103,6 +103,7 @@ export type IconType =
   | 'PersonFill'
   | 'MenuDots'
   | 'Plus'
+  | 'Question'
   | 'ArchiveWhite';
 
 export interface CartTileProps {

@@ -88,14 +88,14 @@ const styles = StyleSheet.create({
   },
   activeButton: {
     backgroundColor: 'rgba(255, 164, 0, 0.23)',
-    shadowColor: '#FEDDC6',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 3,
+    // shadowColor: '#FEDDC6',
+    // shadowOffset: {
+    //   width: 0,
+    //   height: 2,
+    // },
+    // shadowOpacity: 0.25,
+    // shadowRadius: 3.84,
+    // elevation: 3,
     borderRadius: 16,
     flexDirection: 'row',
     alignItems: 'center',

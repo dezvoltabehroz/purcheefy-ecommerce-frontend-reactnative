@@ -63,6 +63,7 @@ const OtpVerificationScreen = () => {
 
       <SuccessModal
         visible={showSuccessPassword}
+        primaryButtonTitle={strings.login}
         onClose={() => setShowSuccessPassword(false)}>
         <View
           style={[

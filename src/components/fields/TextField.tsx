@@ -36,6 +36,7 @@ interface Props {
   inputStyle?: StyleProp<TextStyle>;
   keyboardType?: KeyboardType;
   maxLength?: number;
+  required?: boolean;
 }
 
 const TextField = ({
@@ -56,6 +57,7 @@ const TextField = ({
   inputStyle,
   keyboardType,
   maxLength,
+  required,
 }: Props) => {
   const [isFocused, setIsFocused] = useState(false);
 
@@ -84,6 +86,9 @@ const TextField = ({
         {label ? (
           <AppText fontWeight="bold" style={styles.label}>
             {label}
+            {required && (
+              <AppText style={[styles.label, styles.required]}>*</AppText>
+            )}
           </AppText>
         ) : (
           <></>
@@ -190,6 +195,9 @@ const styles = StyleSheet.create({
   },
   trailingIcon: {
     paddingRight: rw(8),
+  },
+  required: {
+    color: '#FF3B3B',
   },
 });
 
