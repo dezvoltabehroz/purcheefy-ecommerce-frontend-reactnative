@@ -106,7 +106,22 @@ export type IconType =
   | 'Question'
   | 'ChevronDown2'
   | 'ArchiveWhite'
-  | 'Telephone';
+  | 'Close'
+  | 'WordpressHorizontal'
+  | 'Telephone'
+  | 'ShopifyHorizontal'
+  | 'MagentoHorizontal'
+  | 'DrupalHorizontal'
+  | 'JoomlaHorizontal';
+
+export interface BottomSheetProps {
+  visible: boolean;
+  heading?: string;
+  onCloseModal: () => void;
+  headerLeadingIcon?: IconType | undefined;
+  onPressLeadingIcon?: () => void | undefined;
+  addExtraHeaderMargin?: boolean;
+}
 
 export interface CartTileProps {
   title: string;
@@ -150,6 +165,7 @@ export interface StoreType {
   activeIconProps?: IconProps;
   disabledIcon: IconType;
   disabledIconProps?: IconProps;
+  horizontalIcon: IconType;
   activeBgColor: string;
   activeBorderColor: string;
 }

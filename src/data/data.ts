@@ -51,6 +51,7 @@ export const storesList: StoreType[] = [
     disabledIcon: 'ShopifyGrey',
     activeBgColor: 'rgba(149, 191, 71, 0.15)',
     activeBorderColor: 'rgba(149, 191, 71, 0.25)',
+    horizontalIcon: 'ShopifyHorizontal',
   },
   {
     id: '2',
@@ -59,6 +60,7 @@ export const storesList: StoreType[] = [
     disabledIcon: 'WordpressGrey',
     activeBgColor: 'rgba(0, 116, 154, 0.15)',
     activeBorderColor: 'rgba(0, 116, 154, 0.25)',
+    horizontalIcon: 'WordpressHorizontal',
   },
   {
     id: '3',
@@ -67,6 +69,7 @@ export const storesList: StoreType[] = [
     disabledIcon: 'MagentoGrey',
     activeBgColor: 'rgba(243, 123, 32, 0.15)',
     activeBorderColor: 'rgba(243, 123, 32, 0.25)',
+    horizontalIcon: 'MagentoHorizontal',
   },
   {
     id: '4',
@@ -75,6 +78,7 @@ export const storesList: StoreType[] = [
     disabledIcon: 'DrupalGrey',
     activeBgColor: 'rgba(0, 115, 186, 0.15)',
     activeBorderColor: 'rgba(0, 115, 186, 0.25)',
+    horizontalIcon: 'DrupalHorizontal',
   },
   {
     id: '5',
@@ -83,5 +87,6 @@ export const storesList: StoreType[] = [
     disabledIcon: 'JoomlaGrey',
     activeBgColor: 'rgba(249, 165, 65, 0.15)',
     activeBorderColor: 'rgba(249, 165, 65, 0.25)',
+    horizontalIcon: 'JoomlaHorizontal',
   },
 ];

@@ -5,6 +5,7 @@ import AppText from 'components/AppText';
 import SectionHeading from 'components/SectionHeading';
 import VerticalSpacer from 'components/VerticalSpacer';
 import DashboardAppbar from 'components/appbars/DashboardAppbar';
+import SelectStoreSheet from 'components/bottom-sheets/SelectStoreSheet';
 import SmallTitleIconButton from 'components/buttons/SmallTitleIconButton';
 import SuccessModal from 'components/modals/SuccessModal';
 import CartDetailTile from 'components/tiles/CartDetailTile';
@@ -23,6 +24,7 @@ const DashboardScreen = () => {
   const navigation =
     useNavigation<NativeStackNavigationProp<DashboardStackParamList>>();
   const [showSubscriptionModal, setShowSubscriptionModal] = useState(true);
+  const [showSelectStoreSheet, setShowSelectStoreSheet] = useState(false);
 
   const _handleSubscriptionNavigation = () => {
     setShowSubscriptionModal(false);
@@ -66,6 +68,7 @@ const DashboardScreen = () => {
             title={strings.chooseStore}
             icon="ChevronDown"
             iconProps={{width: rw(16), height: rh(10)}}
+            onPress={() => setShowSelectStoreSheet(true)}
           />
         </View>
         <VerticalSpacer factor={2} />
@@ -120,6 +123,10 @@ const DashboardScreen = () => {
           {getIcon('Exclamation2', {width: rw(9), height: rw(38)})}
         </View>
       </SuccessModal>
+      <SelectStoreSheet
+        visible={showSelectStoreSheet}
+        onCloseModal={() => setShowSelectStoreSheet(false)}
+      />
     </SafeAreaView>
   );
 };

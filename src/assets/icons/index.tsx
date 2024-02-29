@@ -44,6 +44,11 @@ import ShopifyGrey from './ShopifyGrey.svg';
 import Shopify from './Shopify.svg';
 import WordpressGrey from './WordpressGrey.svg';
 import Wordpress from './Wordpress.svg';
+import WordpressHorizontal from './WordpressHorizontal.svg';
+import DrupalHorizontal from './DrupalHorizontal.svg';
+import JoomlaHorizontal from './JoomlaHorizontal.svg';
+import MagentoHorizontal from './MagentoHorizontal.svg';
+import ShopifyHorizontal from './ShopifyHorizontal.svg';
 import Search from './Search.svg';
 import Filter from './Filter.svg';
 import PersonFill from './PersonFill.svg';
@@ -52,6 +57,7 @@ import MenuDots from './MenuDots.svg';
 import Plus from './Plus.svg';
 import Question from './Question.svg';
 import Telephone from './Telephone.svg';
+import Close from './Close.svg';
 
 import {rw} from 'utils/dimentions';
 
@@ -129,6 +135,12 @@ export const getIcon = (
     Card: <Card {...props} />,
     Question: <Question {...props} />,
     Telephone: <Telephone {...props} />,
+    Close: <Close {...props} />,
+    WordpressHorizontal: <WordpressHorizontal {...props} />,
+    ShopifyHorizontal: <ShopifyHorizontal {...props} />,
+    MagentoHorizontal: <MagentoHorizontal {...props} />,
+    DrupalHorizontal: <DrupalHorizontal {...props} />,
+    JoomlaHorizontal: <JoomlaHorizontal {...props} />,
   };
   return icons[iconName];
 };
