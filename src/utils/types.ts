@@ -104,7 +104,9 @@ export type IconType =
   | 'MenuDots'
   | 'Plus'
   | 'Question'
-  | 'ArchiveWhite';
+  | 'ChevronDown2'
+  | 'ArchiveWhite'
+  | 'Telephone';
 
 export interface CartTileProps {
   title: string;

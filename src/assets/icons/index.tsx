@@ -8,6 +8,7 @@ import EyeClose from './EyeClose.svg';
 import Person from './Person.svg';
 import ChevronLeft from './ChevronLeft.svg';
 import ChevronDown from './ChevronDown.svg';
+import ChevronDown2 from './ChevronDown2.svg';
 import Cart from './Cart.svg';
 import Card from './Card.svg';
 import Cart2 from './Cart2.svg';
@@ -50,6 +51,7 @@ import NoteFill from './NoteFill.svg';
 import MenuDots from './MenuDots.svg';
 import Plus from './Plus.svg';
 import Question from './Question.svg';
+import Telephone from './Telephone.svg';
 
 import {rw} from 'utils/dimentions';
 
@@ -101,6 +103,7 @@ export const getIcon = (
     ArchiveWhite: <ArchiveWhite {...props} />,
     Badge: <Badge {...props} />,
     ChevronDown: <ChevronDown {...props} />,
+    ChevronDown2: <ChevronDown2 {...props} />,
     BackIcon: <BackIcon {...props} />,
     Globe: <Globe {...props} />,
     Whatsapp: <Whatsapp {...props} />,
@@ -125,6 +128,7 @@ export const getIcon = (
     Plus: <Plus {...props} />,
     Card: <Card {...props} />,
     Question: <Question {...props} />,
+    Telephone: <Telephone {...props} />,
   };
   return icons[iconName];
 };
