@@ -3,9 +3,11 @@ import AddCardScreen from 'screens/dashboard/AddCardScreen';
 import CartDetailScreen from 'screens/dashboard/CartDetailScreen';
 import CartListingScreen from 'screens/dashboard/CartListingScreen';
 import DashboardScreen from 'screens/dashboard/DashboardScreen';
+import EditCartScreen from 'screens/dashboard/EditCartScreen';
 import EditNoteScreen from 'screens/dashboard/EditNoteScreen';
 import NoteDetailScreen from 'screens/dashboard/NoteDetailScreen';
 import NotesListingScreen from 'screens/dashboard/NotesListingScreen';
+import ProductsListingScreen from 'screens/dashboard/ProductsListingScreen';
 import AddStoreDetailsScreen from 'screens/home/AddStoreDetailsScreen';
 import StoresListingScreen from 'screens/home/StoresListingScreen';
 import {DashboardStackParamList} from 'utils/types';
@@ -30,6 +32,11 @@ const DashboardStack = () => {
       <Stack.Screen name="EditNoteScreen" component={EditNoteScreen} />
       <Stack.Screen name="NoteDetailScreen" component={NoteDetailScreen} />
       <Stack.Screen name="AddCardScreen" component={AddCardScreen} />
+      <Stack.Screen name="EditCartScreen" component={EditCartScreen} />
+      <Stack.Screen
+        name="ProductsListingScreen"
+        component={ProductsListingScreen}
+      />
     </Stack.Navigator>
   );
 };

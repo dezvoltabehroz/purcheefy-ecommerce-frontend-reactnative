@@ -58,6 +58,10 @@ import Plus from './Plus.svg';
 import Question from './Question.svg';
 import Telephone from './Telephone.svg';
 import Close from './Close.svg';
+import WhatsappShare from './WhatsappShare.svg';
+import MailShare from './MailShare.svg';
+import LinkShare from './LinkShare.svg';
+import MoreShare from './MoreShare.svg';
 
 import {rw} from 'utils/dimentions';
 
@@ -141,6 +145,10 @@ export const getIcon = (
     MagentoHorizontal: <MagentoHorizontal {...props} />,
     DrupalHorizontal: <DrupalHorizontal {...props} />,
     JoomlaHorizontal: <JoomlaHorizontal {...props} />,
+    WhatsappShare: <WhatsappShare {...props} />,
+    MailShare: <MailShare {...props} />,
+    LinkShare: <LinkShare {...props} />,
+    MoreShare: <MoreShare {...props} />,
   };
   return icons[iconName];
 };

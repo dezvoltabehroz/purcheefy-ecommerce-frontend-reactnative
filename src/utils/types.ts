@@ -45,6 +45,8 @@ export type DashboardStackParamList = {
   EditNoteScreen: undefined;
   NoteDetailScreen: undefined;
   AddCardScreen: undefined;
+  EditCartScreen: undefined;
+  ProductsListingScreen: undefined;
 };
 
 export interface DrawerItemType {
@@ -112,6 +114,10 @@ export type IconType =
   | 'ShopifyHorizontal'
   | 'MagentoHorizontal'
   | 'DrupalHorizontal'
+  | 'WhatsappShare'
+  | 'MailShare'
+  | 'LinkShare'
+  | 'MoreShare'
   | 'JoomlaHorizontal';
 
 export interface BottomSheetProps {

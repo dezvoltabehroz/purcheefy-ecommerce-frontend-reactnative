@@ -35,7 +35,11 @@ const CartDetailScreen = () => {
   const _renderHeader = () => {
     return (
       <View style={[defaultStyles.marginHorizontal18]}>
-        <SectionHeading heading="Item(s) on Shopify" trailingText="Edit" />
+        <SectionHeading
+          heading="Item(s) on Shopify"
+          trailingText="Edit"
+          onPressTrailing={() => navigation.navigate('EditCartScreen')}
+        />
         <VerticalSpacer />
       </View>
     );
