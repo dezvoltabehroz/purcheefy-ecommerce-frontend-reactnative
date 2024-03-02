@@ -7,4 +7,5 @@ export default {
   arabic: require('./arabic.png'),
   noteImage: require('./noteImage.jpeg'),
   loading: require('./loading.gif'),
+  product2: require('./product2.jpeg'),
 };

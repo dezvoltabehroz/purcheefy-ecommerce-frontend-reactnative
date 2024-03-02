@@ -1,11 +1,16 @@
 import AppText from 'components/AppText';
+import HorizontalSpacer from 'components/HorizontalSpacer';
 import VerticalSpacer from 'components/VerticalSpacer';
 import MinimalAppbar from 'components/appbars/MinimalAppbar';
+import ProductCard from 'components/cards/ProductCard';
 import TextField from 'components/fields/TextField';
+import {productsList} from 'data/dummyData';
 import {useState} from 'react';
-import {FlatList, View} from 'react-native';
+import {FlatList, StyleSheet, View} from 'react-native';
 import defaultStyles from 'utils/defaultStyles';
+import {rh, rw} from 'utils/dimentions';
 import {colors} from 'utils/themes';
+import {Product} from 'utils/types';
 
 interface FormValues {
   searchQuery: string;
@@ -20,8 +25,16 @@ const ProductsListingScreen = () => {
     setFormState(oldValues => ({...oldValues, [name]: value}));
   };
 
-  const _renderItem = () => {
-    return <></>;
+  const _renderItem = ({item, index}: {item: Product; index: number}) => {
+    return (
+      <View
+        style={[
+          styles.productItemContainer,
+          index % 2 == 0 ? styles.marginRight : styles.marginLeft,
+        ]}>
+        <ProductCard product={item} />
+      </View>
+    );
   };
 
   const _renderHeader = () => {
@@ -38,6 +51,7 @@ const ProductsListingScreen = () => {
         <AppText fontWeight="semiBold" style={defaultStyles.h6}>
           Item(s) List
         </AppText>
+        <VerticalSpacer />
       </View>
     );
   };
@@ -46,18 +60,31 @@ const ProductsListingScreen = () => {
     <View style={[defaultStyles.flex1, {backgroundColor: colors.white2}]}>
       <MinimalAppbar title="Add Item" showBackIcon withElevation />
       <FlatList
-        data={[1, 2, 3, 4]}
+        data={productsList}
         renderItem={_renderItem}
         style={defaultStyles.flex1}
+        numColumns={2}
         contentContainerStyle={[
           defaultStyles.paddingHorizontal24,
           defaultStyles.paddingVertical24,
         ]}
+        ItemSeparatorComponent={() => <VerticalSpacer factor={2} />}
         ListHeaderComponent={_renderHeader}
-        // ItemSeparatorComponent={() => <VerticalSpacer factor={1.5} />}
       />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  productItemContainer: {
+    flex: 1,
+  },
+  marginRight: {
+    marginRight: rw(6),
+  },
+  marginLeft: {
+    marginLeft: rw(6),
+  },
+});
 
 export default ProductsListingScreen;

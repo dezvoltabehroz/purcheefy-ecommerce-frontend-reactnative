@@ -1,4 +1,5 @@
-import {Notification} from 'utils/types';
+import images from 'assets/images';
+import {Notification, Product} from 'utils/types';
 
 export const notificationsData: Notification[] = [
   {
@@ -48,5 +49,56 @@ export const notificationsData: Notification[] = [
     time: 'Today at 9:42 AM',
     type: 'Cart',
     read: true,
+  },
+];
+
+export const productsList: Product[] = [
+  {
+    id: '1',
+    title: "Men's Fleece Pullover Hoodie",
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    price: '$100.00',
+    images: [images.product2, images.product2],
+  },
+  {
+    id: '2',
+    title: "Men's Fleece Pullover Hoodie",
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    price: '$100.00',
+    images: [images.product2, images.product2],
+  },
+  {
+    id: '3',
+    title: "Men's Fleece Pullover Hoodie",
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    price: '$100.00',
+    images: [images.product2, images.product2],
+  },
+  {
+    id: '4',
+    title: "Men's Fleece Pullover Hoodie",
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    price: '$100.00',
+    images: [images.product2, images.product2],
+  },
+  {
+    id: '5',
+    title: "Men's Fleece Pullover Hoodie",
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    price: '$100.00',
+    images: [images.product2, images.product2],
+  },
+  {
+    id: '6',
+    title: "Men's Fleece Pullover Hoodie",
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    price: '$100.00',
+    images: [images.product2, images.product2],
   },
 ];

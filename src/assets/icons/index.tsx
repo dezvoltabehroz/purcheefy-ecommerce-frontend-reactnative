@@ -55,6 +55,7 @@ import PersonFill from './PersonFill.svg';
 import NoteFill from './NoteFill.svg';
 import MenuDots from './MenuDots.svg';
 import Plus from './Plus.svg';
+import PlusBlack from './PlusBlack.svg';
 import Question from './Question.svg';
 import Telephone from './Telephone.svg';
 import Close from './Close.svg';
@@ -136,6 +137,7 @@ export const getIcon = (
     PersonFill: <PersonFill {...props} />,
     MenuDots: <MenuDots {...props} />,
     Plus: <Plus {...props} />,
+    PlusBlack: <PlusBlack {...props} />,
     Card: <Card {...props} />,
     Question: <Question {...props} />,
     Telephone: <Telephone {...props} />,

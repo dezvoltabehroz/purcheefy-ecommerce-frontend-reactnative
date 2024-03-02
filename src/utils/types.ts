@@ -1,5 +1,6 @@
 import {NavigatorScreenParams} from '@react-navigation/native';
 import {IconProps} from 'assets/icons';
+import {ImageSourcePropType} from 'react-native';
 
 export type FontFamily = 'Poppins';
 export type FontWeight =
@@ -118,6 +119,7 @@ export type IconType =
   | 'MailShare'
   | 'LinkShare'
   | 'MoreShare'
+  | 'PlusBlack'
   | 'JoomlaHorizontal';
 
 export interface BottomSheetProps {
@@ -177,3 +179,11 @@ export interface StoreType {
 }
 
 export type CartType = 'Abandoned' | 'Active' | 'Recovered';
+
+export interface Product {
+  id: string;
+  title: string;
+  description: string;
+  price: string;
+  images: ImageSourcePropType[];
+}
