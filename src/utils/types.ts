@@ -48,6 +48,7 @@ export type DashboardStackParamList = {
   AddCardScreen: undefined;
   EditCartScreen: undefined;
   ProductsListingScreen: undefined;
+  ShopperProfileScreen: undefined;
 };
 
 export interface DrawerItemType {

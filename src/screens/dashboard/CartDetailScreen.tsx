@@ -60,7 +60,11 @@ const CartDetailScreen = () => {
         />
         <VerticalSpacer factor={2} />
         <View style={[defaultStyles.row]}>
-          <IconTextButton icon="PersonFill" text="Shopper's profile" />
+          <IconTextButton
+            icon="PersonFill"
+            text="Shopper's profile"
+            onPress={() => navigation.navigate('ShopperProfileScreen')}
+          />
           <HorizontalSpacer factor={1.3} />
           <IconTextButton
             icon="NoteFill"
