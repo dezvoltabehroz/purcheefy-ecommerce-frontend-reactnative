@@ -7,6 +7,7 @@ import EditCartScreen from 'screens/dashboard/EditCartScreen';
 import EditNoteScreen from 'screens/dashboard/EditNoteScreen';
 import NoteDetailScreen from 'screens/dashboard/NoteDetailScreen';
 import NotesListingScreen from 'screens/dashboard/NotesListingScreen';
+import OrderDetailScreen from 'screens/dashboard/OrderDetailScreen';
 import ProductsListingScreen from 'screens/dashboard/ProductsListingScreen';
 import ShopperProfileScreen from 'screens/dashboard/ShopperProfileScreen';
 import AddStoreDetailsScreen from 'screens/home/AddStoreDetailsScreen';
@@ -42,6 +43,7 @@ const DashboardStack = () => {
         name="ShopperProfileScreen"
         component={ShopperProfileScreen}
       />
+      <Stack.Screen name="OrderDetailScreen" component={OrderDetailScreen} />
     </Stack.Navigator>
   );
 };

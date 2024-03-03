@@ -1,17 +1,22 @@
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import AppText from 'components/AppText';
-import SectionHeading from 'components/SectionHeading';
 import VerticalSpacer from 'components/VerticalSpacer';
 import MinimalAppbar from 'components/appbars/MinimalAppbar';
 import {FlatList, StyleSheet, TouchableOpacity, View} from 'react-native';
 import defaultStyles from 'utils/defaultStyles';
 import {rFB, rh, rw} from 'utils/dimentions';
 import {colors} from 'utils/themes';
+import {DashboardStackParamList} from 'utils/types';
 
 const ShopperProfileScreen = () => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<DashboardStackParamList>>();
   const _renderItem = () => {
     return (
       <TouchableOpacity
         activeOpacity={0.8}
+        onPress={() => navigation.navigate('OrderDetailScreen')}
         style={[
           defaultStyles.row,
           defaultStyles.alignItemsCenter,
