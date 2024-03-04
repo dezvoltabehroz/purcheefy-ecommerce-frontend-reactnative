@@ -7,8 +7,10 @@ import MinimalAppbar from 'components/appbars/MinimalAppbar';
 import CartTypeButtonsGroup from 'components/buttons/CartTypeButtonsGroup';
 import TextField from 'components/fields/TextField';
 import CartDetailTile from 'components/tiles/CartDetailTile';
+import dayjs from 'dayjs';
 import {useState} from 'react';
 import {FlatList, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {Calendar, DateData} from 'react-native-calendars';
 import defaultStyles from 'utils/defaultStyles';
 import {rh, rw} from 'utils/dimentions';
 import {colors} from 'utils/themes';
@@ -22,6 +24,9 @@ const CartListingScreen = () => {
   const navigation =
     useNavigation<NativeStackNavigationProp<DashboardStackParamList>>();
 
+  const [startDate, setStartDate] = useState<string | undefined>();
+  const [endDate, setEndDate] = useState<string | undefined>();
+
   const [formState, setFormState] = useState<FormValues>({
     searchQuery: '',
   });
@@ -29,6 +34,57 @@ const CartListingScreen = () => {
 
   const _handleChangeText = (name: string, value: string) => {
     setFormState(oldValues => ({...oldValues, [name]: value}));
+  };
+
+  const getMarked = () => {
+    let marked: any = {};
+    let date = dayjs(startDate);
+    if (endDate === undefined) {
+      let dates: any = {};
+      dates[startDate!] = {
+        startingDay: startDate,
+        color: colors.primary,
+        textColor: colors.white,
+        disabled: true,
+      };
+      return dates;
+    }
+    while (date.isBefore(dayjs(endDate).add(1, 'day'))) {
+      const formattedDate = dayjs(date).format('YYYY-MM-DD');
+      marked[formattedDate] = {
+        startingDay: formattedDate == dayjs(startDate).format('YYYY-MM-DD'),
+        endingDay: formattedDate == dayjs(endDate).format('YYYY-MM-DD'),
+        color: colors.primary,
+        textColor: colors.white,
+        disabled: true,
+      };
+      date = date.add(1, 'day');
+    }
+    return marked;
+  };
+
+  const _handleDateSelected = (day: DateData) => {
+    if (endDate !== undefined) {
+      if (startDate !== undefined) {
+        setStartDate(day.dateString);
+        setEndDate(undefined);
+        return;
+      }
+    }
+    if (startDate == undefined) {
+      setStartDate(day.dateString);
+      setEndDate(undefined);
+      return;
+    }
+    if (dayjs(day.dateString).isBefore(dayjs(startDate))) {
+      // setEndDate(startDate);
+      setEndDate(undefined);
+      setStartDate(day.dateString);
+      return;
+    } else {
+      setEndDate(day.dateString);
+      return;
+    }
   };
 
   const _renderHeader = () => {
@@ -59,6 +115,14 @@ const CartListingScreen = () => {
           selectedType={selectedType}
           onPressType={setSelectedType}
         />
+        <VerticalSpacer factor={2} />
+        <Calendar
+          enableSwipeMonths
+          markedDates={getMarked()}
+          onDayPress={_handleDateSelected}
+          markingType="period"
+          theme={{arrowColor: colors.primary, calendarBackground: colors.white}}
+        />
       </View>
     );
   };
@@ -74,7 +138,7 @@ const CartListingScreen = () => {
   };
 
   return (
-    <View style={[defaultStyles.flex1, defaultStyles.bgWhite]}>
+    <View style={[defaultStyles.flex1, {backgroundColor: colors.white2}]}>
       <MinimalAppbar title="Active Carts" showBackIcon withElevation />
       <FlatList
         data={[1, 2, 3]}
