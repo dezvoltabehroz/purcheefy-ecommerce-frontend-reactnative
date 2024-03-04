@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     color: 'rgba(0, 0, 0, 0.5)',
   },
   activeButton: {
-    backgroundColor: 'rgba(255, 164, 0, 0.23)',
+    backgroundColor: '#FEDDC6',
     // shadowColor: '#FEDDC6',
     // shadowOffset: {
     //   width: 0,

@@ -16,7 +16,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {strings} from 'utils/constants';
 import defaultStyles from 'utils/defaultStyles';
 import {rh, rw} from 'utils/dimentions';
-import {MainDrawerParamList} from 'utils/types';
+import {CartType, MainDrawerParamList} from 'utils/types';
 import {DrawerActions} from '@react-navigation/native';
 import {Switch} from 'react-native-gesture-handler';
 import {colors} from 'utils/themes';
@@ -45,7 +45,16 @@ const CustomSidebarMenu = (props: DrawerContentComponentProps) => {
       case '4':
       case '5':
       case '6':
-        navigation.navigate('DashboardStack', {screen: 'CartListingScreen'});
+        let cartType: CartType = 'Abandoned';
+        if (id == '5') {
+          cartType = 'Recovered';
+        } else if (id == '6') {
+          cartType = 'Active';
+        }
+        navigation.navigate('DashboardStack', {
+          screen: 'CartListingScreen',
+          params: {cartType},
+        });
         break;
       case '7':
         setShowDeleteAccountModal(true);

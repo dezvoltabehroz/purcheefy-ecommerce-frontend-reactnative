@@ -40,7 +40,7 @@ export type DashboardStackParamList = {
   DashboardScreen: undefined;
   StoresListingScreen: undefined;
   AddStoreDetailsScreen: undefined;
-  CartListingScreen: undefined;
+  CartListingScreen: {cartType: CartType};
   CartDetailScreen: undefined;
   NotesListingScreen: undefined;
   EditNoteScreen: undefined;
@@ -50,6 +50,7 @@ export type DashboardStackParamList = {
   ProductsListingScreen: undefined;
   ShopperProfileScreen: undefined;
   OrderDetailScreen: undefined;
+  ProductDetailScreen: undefined;
 };
 
 export interface DrawerItemType {
@@ -122,7 +123,10 @@ export type IconType =
   | 'LinkShare'
   | 'MoreShare'
   | 'PlusBlack'
-  | 'JoomlaHorizontal';
+  | 'JoomlaHorizontal'
+  | 'Star'
+  | 'StarFilled'
+  | 'Clock';
 
 export interface BottomSheetProps {
   visible: boolean;

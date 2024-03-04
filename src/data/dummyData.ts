@@ -59,7 +59,14 @@ export const productsList: Product[] = [
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     price: '$100.00',
-    images: [images.product2, images.product2],
+    images: [
+      images.product2,
+      images.product3,
+      images.product4,
+      images.product5,
+      images.product6,
+      images.noteImage,
+    ],
   },
   {
     id: '2',

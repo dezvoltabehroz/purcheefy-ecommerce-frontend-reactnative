@@ -8,12 +8,14 @@ import {Product} from 'utils/types';
 
 interface Props {
   product: Product;
+  onPress?: () => void;
 }
 
-const ProductCard = ({product}: Props) => {
+const ProductCard = ({product, onPress}: Props) => {
   return (
     <TouchableOpacity
       activeOpacity={0.8}
+      onPress={onPress}
       style={[defaultStyles.width100, styles.container]}>
       <Image source={product.images[0]} style={styles.image} />
       <View style={styles.productDescriptionContainer}>

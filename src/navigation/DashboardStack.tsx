@@ -8,6 +8,7 @@ import EditNoteScreen from 'screens/dashboard/EditNoteScreen';
 import NoteDetailScreen from 'screens/dashboard/NoteDetailScreen';
 import NotesListingScreen from 'screens/dashboard/NotesListingScreen';
 import OrderDetailScreen from 'screens/dashboard/OrderDetailScreen';
+import ProductDetailScreen from 'screens/dashboard/ProductDetailScreen';
 import ProductsListingScreen from 'screens/dashboard/ProductsListingScreen';
 import ShopperProfileScreen from 'screens/dashboard/ShopperProfileScreen';
 import AddStoreDetailsScreen from 'screens/home/AddStoreDetailsScreen';
@@ -44,6 +45,10 @@ const DashboardStack = () => {
         component={ShopperProfileScreen}
       />
       <Stack.Screen name="OrderDetailScreen" component={OrderDetailScreen} />
+      <Stack.Screen
+        name="ProductDetailScreen"
+        component={ProductDetailScreen}
+      />
     </Stack.Navigator>
   );
 };

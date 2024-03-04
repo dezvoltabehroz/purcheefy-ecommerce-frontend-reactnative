@@ -63,6 +63,9 @@ import WhatsappShare from './WhatsappShare.svg';
 import MailShare from './MailShare.svg';
 import LinkShare from './LinkShare.svg';
 import MoreShare from './MoreShare.svg';
+import Star from './Star.svg';
+import StarFilled from './StarFilled.svg';
+import Clock from './Clock.svg';
 
 import {rw} from 'utils/dimentions';
 
@@ -151,6 +154,9 @@ export const getIcon = (
     MailShare: <MailShare {...props} />,
     LinkShare: <LinkShare {...props} />,
     MoreShare: <MoreShare {...props} />,
+    Star: <Star {...props} />,
+    StarFilled: <StarFilled {...props} />,
+    Clock: <Clock {...props} />,
   };
   return icons[iconName];
 };

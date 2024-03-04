@@ -8,4 +8,9 @@ export default {
   noteImage: require('./noteImage.jpeg'),
   loading: require('./loading.gif'),
   product2: require('./product2.jpeg'),
+  product3: require('./product3.jpeg'),
+  product4: require('./product4.jpeg'),
+  product5: require('./product5.jpeg'),
+  product6: require('./product6.jpeg'),
+  user: require('./user.png'),
 };

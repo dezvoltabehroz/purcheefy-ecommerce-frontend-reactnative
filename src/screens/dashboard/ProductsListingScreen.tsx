@@ -1,3 +1,5 @@
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import AppText from 'components/AppText';
 import HorizontalSpacer from 'components/HorizontalSpacer';
 import VerticalSpacer from 'components/VerticalSpacer';
@@ -10,7 +12,7 @@ import {FlatList, StyleSheet, View} from 'react-native';
 import defaultStyles from 'utils/defaultStyles';
 import {rh, rw} from 'utils/dimentions';
 import {colors} from 'utils/themes';
-import {Product} from 'utils/types';
+import {DashboardStackParamList, Product} from 'utils/types';
 
 interface FormValues {
   searchQuery: string;
@@ -20,9 +22,15 @@ const ProductsListingScreen = () => {
   const [formState, setFormState] = useState<FormValues>({
     searchQuery: '',
   });
+  const navigation =
+    useNavigation<NativeStackNavigationProp<DashboardStackParamList>>();
 
   const _handleChangeText = (name: string, value: string) => {
     setFormState(oldValues => ({...oldValues, [name]: value}));
+  };
+
+  const _handleProductDetailNavigation = () => {
+    navigation.navigate('ProductDetailScreen');
   };
 
   const _renderItem = ({item, index}: {item: Product; index: number}) => {
@@ -32,7 +40,7 @@ const ProductsListingScreen = () => {
           styles.productItemContainer,
           index % 2 == 0 ? styles.marginRight : styles.marginLeft,
         ]}>
-        <ProductCard product={item} />
+        <ProductCard product={item} onPress={_handleProductDetailNavigation} />
       </View>
     );
   };

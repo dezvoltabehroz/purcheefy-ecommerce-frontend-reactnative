@@ -150,8 +150,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: rw(24),
   },
   profileDetailContainer: {
-    backgroundColor: colors.white,
     borderRadius: 12,
+    borderWidth: 1,
+    borderColor: 'rgba(0, 0, 0, 0.15)',
   },
   detailItem: {
     paddingHorizontal: rw(16),
