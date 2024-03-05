@@ -7,6 +7,7 @@ import LockWhite from './LockWhite.svg';
 import EyeClose from './EyeClose.svg';
 import Person from './Person.svg';
 import ChevronLeft from './ChevronLeft.svg';
+import ChevronLeftWhite from './ChevronLeftWhite.svg';
 import ChevronDown from './ChevronDown.svg';
 import ChevronDown2 from './ChevronDown2.svg';
 import Cart from './Cart.svg';
@@ -98,6 +99,7 @@ export const getIcon = (
     Sms: <Sms {...props} />,
     Person: <Person {...props} />,
     ChevronLeft: <ChevronLeft {...props} />,
+    ChevronLeftWhite: <ChevronLeftWhite {...props} />,
     Cart: <Cart {...props} />,
     Cart2: <Cart2 {...props} />,
     Dashboard: <Dashboard {...props} />,

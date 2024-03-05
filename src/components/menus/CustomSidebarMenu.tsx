@@ -49,7 +49,7 @@ const CustomSidebarMenu = (props: DrawerContentComponentProps) => {
         if (id == '5') {
           cartType = 'Recovered';
         } else if (id == '6') {
-          cartType = 'Active';
+          cartType = 'Archive';
         }
         navigation.navigate('DashboardStack', {
           screen: 'CartListingScreen',

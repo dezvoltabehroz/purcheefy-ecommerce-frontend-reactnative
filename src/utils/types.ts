@@ -124,6 +124,7 @@ export type IconType =
   | 'MoreShare'
   | 'PlusBlack'
   | 'JoomlaHorizontal'
+  | 'ChevronLeftWhite'
   | 'Star'
   | 'StarFilled'
   | 'Clock';
@@ -184,7 +185,7 @@ export interface StoreType {
   activeBorderColor: string;
 }
 
-export type CartType = 'Abandoned' | 'Active' | 'Recovered';
+export type CartType = 'Abandoned' | 'Active' | 'Recovered' | 'Archive';
 
 export interface Product {
   id: string;

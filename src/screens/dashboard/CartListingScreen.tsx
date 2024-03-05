@@ -1,6 +1,10 @@
 import {useNavigation} from '@react-navigation/native';
-import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {
+  NativeStackNavigationProp,
+  NativeStackScreenProps,
+} from '@react-navigation/native-stack';
 import {getIcon} from 'assets/icons';
+import AppText from 'components/AppText';
 import HorizontalSpacer from 'components/HorizontalSpacer';
 import VerticalSpacer from 'components/VerticalSpacer';
 import MinimalAppbar from 'components/appbars/MinimalAppbar';
@@ -8,29 +12,33 @@ import CartTypeButtonsGroup from 'components/buttons/CartTypeButtonsGroup';
 import TextField from 'components/fields/TextField';
 import CartDetailTile from 'components/tiles/CartDetailTile';
 import dayjs from 'dayjs';
-import {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {FlatList, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {Calendar, DateData} from 'react-native-calendars';
 import defaultStyles from 'utils/defaultStyles';
-import {rh, rw} from 'utils/dimentions';
-import {colors} from 'utils/themes';
+import {fontSizes, rh, rw} from 'utils/dimentions';
+import {colors, fonts} from 'utils/themes';
 import {CartType, DashboardStackParamList} from 'utils/types';
 
 interface FormValues {
   searchQuery: string;
 }
 
-const CartListingScreen = () => {
-  const navigation =
-    useNavigation<NativeStackNavigationProp<DashboardStackParamList>>();
+type Props = NativeStackScreenProps<
+  DashboardStackParamList,
+  'CartListingScreen'
+>;
 
+const CartListingScreen = ({route, navigation}: Props) => {
   const [startDate, setStartDate] = useState<string | undefined>();
   const [endDate, setEndDate] = useState<string | undefined>();
 
   const [formState, setFormState] = useState<FormValues>({
     searchQuery: '',
   });
-  const [selectedType, setSelectedType] = useState<CartType>('Abandoned');
+  const [selectedType, setSelectedType] = useState<CartType>(
+    route.params.cartType,
+  );
 
   const _handleChangeText = (name: string, value: string) => {
     setFormState(oldValues => ({...oldValues, [name]: value}));
@@ -109,20 +117,37 @@ const CartListingScreen = () => {
             {getIcon('Filter', {width: rw(24), height: rw(24)})}
           </TouchableOpacity>
         </View>
-        <VerticalSpacer factor={3} />
-
-        <CartTypeButtonsGroup
-          selectedType={selectedType}
-          onPressType={setSelectedType}
-        />
-        <VerticalSpacer factor={2} />
-        <Calendar
-          enableSwipeMonths
-          markedDates={getMarked()}
-          onDayPress={_handleDateSelected}
-          markingType="period"
-          theme={{arrowColor: colors.primary, calendarBackground: colors.white}}
-        />
+        {selectedType !== 'Archive' && (
+          <>
+            <VerticalSpacer factor={3} />
+            <CartTypeButtonsGroup
+              selectedType={selectedType}
+              onPressType={setSelectedType}
+            />
+            <VerticalSpacer factor={2} />
+            <Calendar
+              enableSwipeMonths
+              markedDates={getMarked()}
+              onDayPress={_handleDateSelected}
+              markingType="period"
+              theme={{
+                arrowColor: colors.primary,
+                calendarBackground: colors.white,
+                monthTextColor: colors.white,
+                textMonthFontFamily: fonts.Poppins.regular,
+                'stylesheet.calendar.header': {
+                  headerContainer: {
+                    backgroundColor: colors.primary,
+                    borderRadius: 12,
+                    paddingLeft: 4,
+                    paddingRight: 4,
+                  },
+                },
+              }}
+              monthFormat="MMMM yyyy"
+            />
+          </>
+        )}
       </View>
     );
   };
@@ -139,7 +164,11 @@ const CartListingScreen = () => {
 
   return (
     <View style={[defaultStyles.flex1, {backgroundColor: colors.white2}]}>
-      <MinimalAppbar title="Active Carts" showBackIcon withElevation />
+      <MinimalAppbar
+        title={`${selectedType} Carts`}
+        showBackIcon
+        withElevation
+      />
       <FlatList
         data={[1, 2, 3]}
         renderItem={_renderItem}
@@ -159,6 +188,24 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     paddingVertical: rh(11.5),
     top: 3,
+  },
+  customHeader: {
+    backgroundColor: colors.primary,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginHorizontal: -4,
+    paddingVertical: rh(6),
+    borderRadius: 16,
+  },
+  calendarIcon: {
+    paddingHorizontal: rw(16),
+    paddingVertical: rh(6),
+  },
+  monthTitle: {
+    color: colors.white,
+    fontSize: fontSizes.h6,
+    top: 1.4,
   },
 });
 

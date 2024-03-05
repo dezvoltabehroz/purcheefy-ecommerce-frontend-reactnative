@@ -18,7 +18,7 @@ import {strings} from 'utils/constants';
 import defaultStyles from 'utils/defaultStyles';
 import {rh, rw} from 'utils/dimentions';
 import {colors} from 'utils/themes';
-import {DashboardStackParamList} from 'utils/types';
+import {CartType, DashboardStackParamList} from 'utils/types';
 
 const DashboardScreen = () => {
   const navigation =
@@ -33,11 +33,16 @@ const DashboardScreen = () => {
     }, 300);
   };
 
+  const _handleCartListingNavigation = (cartType: CartType) => {
+    navigation.navigate('CartListingScreen', {cartType});
+  };
+
   const _renderItem = ({item, index}: {item: any; index: number}) => {
     return (
       <CartDetailTile
         key={index}
         containerStyle={defaultStyles.marginHorizontal24}
+        onPress={() => navigation.navigate('CartDetailScreen')}
       />
     );
   };
@@ -72,23 +77,36 @@ const DashboardScreen = () => {
           />
         </View>
         <VerticalSpacer factor={2} />
-        <NewCartTile title={strings.newCart} value="$3,578" cartCount={15000} />
+        <NewCartTile
+          title={strings.newCart}
+          value="$3,578"
+          cartCount={15000}
+          onPress={() => _handleCartListingNavigation('Abandoned')}
+        />
         <VerticalSpacer factor={2} />
         <SimpleCartTile
           title="Recovered Cart"
           value="$3,578"
           cartCount={5321}
           backgroundColor={colors.secondary}
+          onPress={() => _handleCartListingNavigation('Recovered')}
         />
         <VerticalSpacer factor={2} />
         <SimpleCartTile
-          title="Abandoned Cart"
+          title="Active Cart"
           value="$3,578"
           cartCount={5321}
           backgroundColor="rgba(249, 210, 36, 0.54)"
+          onPress={() => _handleCartListingNavigation('Active')}
         />
         <VerticalSpacer factor={3} />
-        <SectionHeading heading="Most Recent" trailingText="View All" />
+        <SectionHeading
+          heading="Most Recent"
+          trailingText="View All"
+          onPressTrailing={() =>
+            navigation.navigate('CartListingScreen', {cartType: 'Abandoned'})
+          }
+        />
         <VerticalSpacer />
       </View>
     );
