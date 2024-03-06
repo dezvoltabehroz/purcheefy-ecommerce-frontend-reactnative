@@ -1,10 +1,5 @@
-import {useNavigation} from '@react-navigation/native';
-import {
-  NativeStackNavigationProp,
-  NativeStackScreenProps,
-} from '@react-navigation/native-stack';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {getIcon} from 'assets/icons';
-import AppText from 'components/AppText';
 import HorizontalSpacer from 'components/HorizontalSpacer';
 import VerticalSpacer from 'components/VerticalSpacer';
 import MinimalAppbar from 'components/appbars/MinimalAppbar';

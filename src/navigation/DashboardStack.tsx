@@ -1,5 +1,6 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import AddCardScreen from 'screens/dashboard/AddCardScreen';
+import AddDiscountScreen from 'screens/dashboard/AddDiscountScreen';
 import CartDetailScreen from 'screens/dashboard/CartDetailScreen';
 import CartListingScreen from 'screens/dashboard/CartListingScreen';
 import DashboardScreen from 'screens/dashboard/DashboardScreen';
@@ -49,6 +50,7 @@ const DashboardStack = () => {
         name="ProductDetailScreen"
         component={ProductDetailScreen}
       />
+      <Stack.Screen name="AddDiscountScreen" component={AddDiscountScreen} />
     </Stack.Navigator>
   );
 };

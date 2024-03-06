@@ -1,3 +1,5 @@
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {getIcon} from 'assets/icons';
 import images from 'assets/images';
 import AppText from 'components/AppText';
@@ -14,6 +16,7 @@ import {
 } from 'react-native';
 import defaultStyles from 'utils/defaultStyles';
 import {rh, rw} from 'utils/dimentions';
+import {DashboardStackParamList} from 'utils/types';
 
 interface Props {
   containerStyle?: StyleProp<ViewStyle>;
@@ -22,6 +25,8 @@ interface Props {
 }
 
 const CartItemTile = (props: Props) => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<DashboardStackParamList>>();
   return (
     <TouchableOpacity
       activeOpacity={0.8}
@@ -78,7 +83,10 @@ const CartItemTile = (props: Props) => {
                   })}
                 </TouchableOpacity>
               </View>
-              <TouchableOpacity activeOpacity={0.8} style={styles.smallButton}>
+              <TouchableOpacity
+                activeOpacity={0.8}
+                style={styles.smallButton}
+                onPress={() => navigation.navigate('AddDiscountScreen')}>
                 <AppText
                   style={[defaultStyles.textPrimary, defaultStyles.textSmall]}>
                   Apply discount

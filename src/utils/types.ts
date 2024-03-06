@@ -51,6 +51,7 @@ export type DashboardStackParamList = {
   ShopperProfileScreen: undefined;
   OrderDetailScreen: undefined;
   ProductDetailScreen: undefined;
+  AddDiscountScreen: undefined;
 };
 
 export interface DrawerItemType {
@@ -194,3 +195,5 @@ export interface Product {
   price: string;
   images: ImageSourcePropType[];
 }
+
+export type DiscountType = 'Percentage' | 'Currency';
