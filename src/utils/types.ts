@@ -128,7 +128,9 @@ export type IconType =
   | 'ChevronLeftWhite'
   | 'Star'
   | 'StarFilled'
-  | 'Clock';
+  | 'Clock'
+  | 'Camera'
+  | 'FileImage';
 
 export interface BottomSheetProps {
   visible: boolean;
@@ -197,3 +199,5 @@ export interface Product {
 }
 
 export type DiscountType = 'Percentage' | 'Currency';
+
+export type UploadedImageSource = 'Gallery' | 'Camera';

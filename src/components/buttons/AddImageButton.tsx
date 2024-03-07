@@ -13,7 +13,10 @@ interface Props {
 
 const AddImageButton = ({title, onPress}: Props) => {
   return (
-    <TouchableOpacity activeOpacity={0.8} style={styles.container}>
+    <TouchableOpacity
+      activeOpacity={0.8}
+      style={styles.container}
+      onPress={onPress}>
       <View style={styles.plusButtonContainer}>
         {getIcon('Plus', {width: rw(16), height: rw(16)})}
       </View>

@@ -1,7 +1,9 @@
 import {
   GestureResponderEvent,
+  StyleProp,
   StyleSheet,
   TouchableOpacity,
+  ViewStyle,
 } from 'react-native';
 import AppText from '../AppText';
 import {colors} from 'utils/themes';
@@ -20,6 +22,7 @@ interface Props {
   borderColor?: string;
   fontWeight?: FontWeight;
   icon?: IconType;
+  buttonStyle?: StyleProp<ViewStyle>;
   // iconProps?: IconProps;
 }
 
@@ -32,6 +35,7 @@ const BigButton = ({
   onPress,
   fontWeight = 'semiBold',
   icon,
+  buttonStyle,
 }: // iconProps,
 Props) => {
   return (
@@ -43,6 +47,7 @@ Props) => {
         defaultStyles.center,
         showPrimaryBorder && {borderColor: borderColor, ...styles.borderred},
         {backgroundColor: backgroundColor},
+        buttonStyle,
       ]}>
       {/* {icon && (
         <>

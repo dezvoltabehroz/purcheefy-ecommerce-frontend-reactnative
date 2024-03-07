@@ -67,6 +67,8 @@ import MoreShare from './MoreShare.svg';
 import Star from './Star.svg';
 import StarFilled from './StarFilled.svg';
 import Clock from './Clock.svg';
+import Camera from './Camera.svg';
+import FileImage from './FileImage.svg';
 
 import {rw} from 'utils/dimentions';
 
@@ -159,6 +161,8 @@ export const getIcon = (
     Star: <Star {...props} />,
     StarFilled: <StarFilled {...props} />,
     Clock: <Clock {...props} />,
+    Camera: <Camera {...props} />,
+    FileImage: <FileImage {...props} />,
   };
   return icons[iconName];
 };
