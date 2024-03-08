@@ -130,7 +130,8 @@ export type IconType =
   | 'StarFilled'
   | 'Clock'
   | 'Camera'
-  | 'FileImage';
+  | 'FileImage'
+  | 'Edit';
 
 export interface BottomSheetProps {
   visible: boolean;

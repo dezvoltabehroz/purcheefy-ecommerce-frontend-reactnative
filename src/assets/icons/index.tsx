@@ -69,6 +69,7 @@ import StarFilled from './StarFilled.svg';
 import Clock from './Clock.svg';
 import Camera from './Camera.svg';
 import FileImage from './FileImage.svg';
+import Edit from './Edit.svg';
 
 import {rw} from 'utils/dimentions';
 
@@ -163,6 +164,7 @@ export const getIcon = (
     Clock: <Clock {...props} />,
     Camera: <Camera {...props} />,
     FileImage: <FileImage {...props} />,
+    Edit: <Edit {...props} />,
   };
   return icons[iconName];
 };
